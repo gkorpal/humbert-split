@@ -724,7 +724,7 @@ end
     SMALL_P_BITS
 
 Bit-length below which `default_output_filename` names files by p's
-decimal value ("polarizations_p23.txt") rather than by bits+digest.
+decimal value ("polz_23_100000.txt") rather than by bits+digest.
 25 bits sits in the empty gap between the two existing corpora under
 `data/`: the small sets top out at p = 1619 (11 bits) and the big sets
 start at 50 bits.
@@ -751,23 +751,22 @@ end
 Filesystem-safe default output filename, in one of two shapes matching
 the conventions already used under `data/`:
 
-  * p under `SMALL_P_BITS` (25) bits — "polarizations_p<p>.txt", p's
-    decimal value verbatim, as in data/polz_small_all/ and
-    data/polz_small_100k/ (e.g. "polarizations_p23.txt"). Short enough
-    to stay readable, and the prime is recoverable from the name.
+  * p under `SMALL_P_BITS` (25) bits — "polz_<p>_<N>.txt", p's
+    decimal value verbatim, as in data/polz_small_100k/ (e.g.
+    "polz_23_100000.txt"). Short enough to stay readable, and the
+    prime is recoverable from the name.
   * otherwise — "polz_<bits>bit_<digest>_<N>.txt", as in
     data/polz_big_10k/ (e.g. "polz_1000bit_faa1c19f_10000.txt"), where
     <bits> is p's bit length and <digest> an 8-hex-digit hash of p's
     decimal value. A 1000-bit p has ~302 digits, far too long for a
     filename, so it is identified by size plus digest instead.
 
-Note the small form carries no N, matching the existing corpus: two
-runs for the same p with different N resolve to the same default path
-and the second overwrites the first. Pass `--outfile` to keep both.
+Both forms carry N, so two runs for the same p with different N
+resolve to distinct default paths.
 """
 function default_output_filename(pZ::ZZRingElem, N::Int)::String
     bits = ndigits(pZ, base=2)
-    bits < SMALL_P_BITS && return "polarizations_p$(pZ).txt"
+    bits < SMALL_P_BITS && return "polz_$(pZ)_$(N).txt"
     digest = string(hash(string(pZ)) & 0xffffffff; base=16, pad=8)
     return "polz_$(bits)bit_$(digest)_$(N).txt"
 end
@@ -912,7 +911,8 @@ Optional options:
                           for cryptographic-size p). Pass explicitly to
                           override.
   --outfile PATH         Output file path
-                          (default: polz_<bits>bit_<digest>_<N>.txt)
+                          (default: polz_<p>_<N>.txt for p under 25 bits,
+                          otherwise polz_<bits>bit_<digest>_<N>.txt)
   --max-tries K          Max RepresentInteger attempts per sample
                           (default: auto-computed from p's bit length)
   --seed S               Base RNG seed (integer). Reproduces a run exactly
