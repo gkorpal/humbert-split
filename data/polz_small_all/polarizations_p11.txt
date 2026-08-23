@@ -1,0 +1,13 @@
+p = 11
+order basis: [1, i, (i+j)/2, (1+ij)/2]
+classes = 5, targetH = 5, reps_seen = 38
+used: Amax=5, Astart=1, Astep=dynamic, depth=0, bacher_depth=0, rep_order=small_bound, LLL_reduced_packets=true
+timing(s): total=2.28 enum=0.5 packets=1.48 reduce=0.0 merge=0.1 setup=0.03 iso=0.0
+checks: checked=86 merged=33 slow_count=0 candidates=38
+bounds: old_min=6 old_median=30 old_max=30 new_min=4 new_median=6 new_max=6
+# Each line: u v w x y z  |  [ u (w,x,y,z) ; conj(a) v ]  | det=1?
+[1] 1 1 0 0 0 0  |  [ 1  (0,0,0,0) ; (0,0,0,0)  1 ]  | det=1? true
+[2] 2 2 0 0 0 -1  |  [ 2  (0,0,0,-1) ; (-1,0,0,1)  2 ]  | det=1? true
+[3] 3 3 -1 0 -1 -1  |  [ 3  (-1,0,-1,-1) ; (-2,0,1,1)  3 ]  | det=1? true
+[4] 4 4 -2 1 -2 0  |  [ 4  (-2,1,-2,0) ; (-2,-1,2,0)  4 ]  | det=1? true
+[5] 5 5 0 0 -2 -2  |  [ 5  (0,0,-2,-2) ; (-2,0,2,2)  5 ]  | det=1? true
