@@ -1,0 +1,4 @@
+# The polz_big_100k pieces are plain text reassembled byte-for-byte by `cat`.
+# Without this, a clone with core.autocrlf=true (the Windows default) would
+# rewrite LF to CRLF on checkout and the merged files would fail their checksums.
+data/polz_big_100k/*.part* -text
