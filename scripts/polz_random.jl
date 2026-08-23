@@ -1,6 +1,5 @@
 using Oscar
 using Random
-using SHA
 
 # ============================================================
 # Z conventions
@@ -538,8 +537,9 @@ the largest sbound with N ≈ p^(4·sbound) staying within roughly
 `target_bits` bits, clamped to [1, 20].
 
 Note the lower clamp wins for large p and `target_bits` is then
-exceeded: a 1421-bit p yields sbound = 1 and hence N ≈ 5700 bits,
-~3.5x over a 1600-bit target. sbound = 1 is already the smallest value
+exceeded: the 1000-bit p = 2^721*3^176-1 yields sbound = 1 and hence
+N ≈ 4000 bits, 2.5x over a 1600-bit target. sbound = 1 is already the
+smallest value
 that keeps s, t non-trivial, so there is nothing below it to pick;
 lower the exponent on the t-bound in `random_polarization` if the norm
 equation needs to be smaller than that.
@@ -717,8 +717,19 @@ function generate_polarizations(p::PInt, N::Int;
 end
 
 # ============================================================
-# 8) Pretty printing
+# 8) Pretty printing and output naming
 # ============================================================
+
+"""
+    SMALL_P_BITS
+
+Bit-length below which `default_output_filename` names files by p's
+decimal value ("polarizations_p23.txt") rather than by bits+digest.
+25 bits sits in the empty gap between the two existing corpora under
+`data/`: the small sets top out at p = 1619 (11 bits) and the big sets
+start at 50 bits.
+"""
+const SMALL_P_BITS = 25
 
 """
     shortZ(x::ZZRingElem; maxchars=60) -> String
@@ -737,20 +748,27 @@ end
 """
     default_output_filename(pZ::ZZRingElem, N::Int) -> String
 
-Filesystem-safe default output filename, always of the form
-"polz_<bits>bit_<digest>_<N>.txt" where <bits> is p's bit length and
-<digest> is the first 8 hex digits of SHA-256 of p's decimal value.
-Using bits+digest uniformly (rather than p's raw decimal value for
-small p) keeps filenames a consistent, predictable shape across every
-prime size.
+Filesystem-safe default output filename, in one of two shapes matching
+the conventions already used under `data/`:
 
-SHA-256 rather than `Base.hash`: the latter is not guaranteed stable
-across Julia versions, so the same (p, N) could land in different files
-on different builds.
+  * p under `SMALL_P_BITS` (25) bits — "polarizations_p<p>.txt", p's
+    decimal value verbatim, as in data/polz_small_all/ and
+    data/polz_small_100k/ (e.g. "polarizations_p23.txt"). Short enough
+    to stay readable, and the prime is recoverable from the name.
+  * otherwise — "polz_<bits>bit_<digest>_<N>.txt", as in
+    data/polz_big_10k/ (e.g. "polz_1000bit_faa1c19f_10000.txt"), where
+    <bits> is p's bit length and <digest> an 8-hex-digit hash of p's
+    decimal value. A 1000-bit p has ~302 digits, far too long for a
+    filename, so it is identified by size plus digest instead.
+
+Note the small form carries no N, matching the existing corpus: two
+runs for the same p with different N resolve to the same default path
+and the second overwrites the first. Pass `--outfile` to keep both.
 """
 function default_output_filename(pZ::ZZRingElem, N::Int)::String
     bits = ndigits(pZ, base=2)
-    digest = bytes2hex(sha256(string(pZ)))[1:8]
+    bits < SMALL_P_BITS && return "polarizations_p$(pZ).txt"
+    digest = string(hash(string(pZ)) & 0xffffffff; base=16, pad=8)
     return "polz_$(bits)bit_$(digest)_$(N).txt"
 end
 
