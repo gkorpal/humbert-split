@@ -110,11 +110,16 @@ struct QEltZZ
 end
 
 """
-    is_even(x::ZZRingElem) -> Bool
+    _is_even(x::ZZRingElem) -> Bool
 
 Test whether `x` is even.
+
+Deliberately underscore-prefixed: Oscar exports `is_even` (an alias for
+`Base.iseven`), and defining an unprefixed `is_even` here would replace
+that binding in `Main` with a one-method function, breaking `is_even`
+for every other type in an `include()`-ing session.
 """
-is_even(x::ZElem) = iszero(mod(x, 2))
+_is_even(x::ZElem) = iszero(mod(x, 2))
 
 """
     in_order(a::QEltZZ) -> Bool
@@ -122,7 +127,7 @@ is_even(x::ZElem) = iszero(mod(x, 2))
 Test whether the half-coordinates of `a` satisfy the parity condition
 (A0 ≡ A3 and A1 ≡ A2 mod 2) that puts `a` in the maximal order O.
 """
-in_order(a::QEltZZ) = is_even(a.A0 - a.A3) && is_even(a.A1 - a.A2)
+in_order(a::QEltZZ) = _is_even(a.A0 - a.A3) && _is_even(a.A1 - a.A2)
 
 """
     nrd_q(a::QEltZZ, p) -> ZZRingElem
@@ -144,8 +149,8 @@ Convert half-coordinates to coordinates in the order basis
 """
 function to_wxyz(a::QEltZZ)
     A0,A1,A2,A3 = a.A0,a.A1,a.A2,a.A3
-    is_even(A0 - A3) || error("to_wxyz(QEltZZ): parity fail (A0-A3 odd); not in O")
-    is_even(A1 - A2) || error("to_wxyz(QEltZZ): parity fail (A1-A2 odd); not in O")
+    _is_even(A0 - A3) || error("to_wxyz(QEltZZ): parity fail (A0-A3 odd); not in O")
+    _is_even(A1 - A2) || error("to_wxyz(QEltZZ): parity fail (A1-A2 odd); not in O")
     z = A3
     y = A2
     w = div(A0 - z, 2)
@@ -184,7 +189,25 @@ det_unimodular_ok(H::Hermitian2x2ZZ, p::PInt) = (H.u*H.v - nrd_q(H.a, p) == 1)
 #    p^(e/2) on the real axis), and p ≡ 1 (mod 4) prime (splits as
 #    ππ̄, with π = x+iy found via Cornacchia from a square root of -1
 #    mod p).
+#
+#    Nemo's factor(::ZZRingElem) is NOT safe to call concurrently: its
+#    ECM path indexes _flint_rand_states / _ecm_B1s / _ecm_nCs by
+#    Threads.threadid() (Nemo/src/flint/fmpz_factor.jl:77-91, the same
+#    out-of-bounds hazard documented in section 1), and it both reads
+#    and push!es an unsynchronised `big_primes::Vector{ZZRingElem}`
+#    global (fmpz_factor.jl:132-163). FACTOR_LOCK serialises it. This
+#    costs nothing in practice: the factor fallback is only reachable
+#    for small rhs (see factor_digit_cutoff), while the Cornacchia fast
+#    path that dominates every realistic run never takes the lock.
 # ============================================================
+
+"""
+    FACTOR_LOCK
+
+Serialises calls into Nemo's `factor`, which carries thread-unsafe
+global state. See the section comment above.
+"""
+const FACTOR_LOCK = ReentrantLock()
 
 """
     gauss_mul(a, b, c, d) -> (re, im)
@@ -247,11 +270,16 @@ Find `(x, y)` with `x² + y² = n`, or `nothing` if no such pair exists.
 Requires fully factoring `n` (via `factor`), so this is only cheap for
 small or smooth `n`; callers gate its use accordingly (see
 `allow_factor` in `represent_integer_in_O`).
+
+The `factor` call is serialised through `FACTOR_LOCK` (see below); the
+surrounding Gaussian-integer arithmetic is pure and stays parallel.
 """
 function sum_two_squares(n::ZElem)
     n < 0 && return nothing
     iszero(n) && return (ZZ(0), ZZ(0))
-    fac = factor(n)
+    fac = lock(FACTOR_LOCK) do
+        factor(n)
+    end
     a, b = ZZ(1), ZZ(0)
     for (pp, e0) in fac
         e = Int(e0)
@@ -289,7 +317,58 @@ end
 #    the disk of radius B = ⌊√(4N/p)⌋ keeps rhs > 0; heuristically a
 #    constant fraction of samples land on a prime rhs ≡ 1 (mod 4), so
 #    O(log p) retries succeed with overwhelming probability.
+#
+#    Parity: with p ≡ 3 (mod 4), A2²+A3² is 0, 1 or 2 mod 4 according as
+#    A2,A3 are both even, opposite parity, or both odd, so
+#        rhs = 4N - p(A2²+A3²) ≡ 0, 1, 2 (mod 4)
+#    respectively. The fast path's `rhs ≡ 1 (mod 4)` test therefore holds
+#    for exactly the opposite-parity samples — a fact known before rhs is
+#    ever computed. When the factor fallback cannot fire (see below) we
+#    sample that parity directly instead of discarding half the draws.
+#    Same-parity samples are still reachable through the factor fallback
+#    (both even needs A0,A1 both even, rhs ≡ 0; both odd needs A0,A1 both
+#    odd, rhs ≡ 2), so the restriction is applied only when that fallback
+#    is provably dead for this call.
 # ============================================================
+
+"""
+    RepresentIntegerFailure
+
+Raised when `represent_integer_in_O` exhausts its retry budget, or is
+handed parameters for which no solution is reachable. Callers that
+retry with a fresh sample (see `generate_polarizations`) match on this
+type; anything else escaping `represent_integer_in_O` is a real bug and
+must propagate.
+"""
+struct RepresentIntegerFailure <: Exception
+    msg::String
+end
+
+Base.showerror(io::IO, e::RepresentIntegerFailure) =
+    print(io, "RepresentInteger: ", e.msg)
+
+"""
+    rand_even_pm(rng, B) -> ZZRingElem
+
+Uniform *even* integer in [-B, B], i.e. 2u for u uniform in
+[-⌊B/2⌋, ⌊B/2⌋].
+"""
+function rand_even_pm(rng::AbstractRNG, B::ZElem)
+    h = div(B, 2)
+    return 2*(rand_below(rng, BigInt(2*h)) - h)
+end
+
+"""
+    rand_odd_pm(rng, B) -> ZZRingElem
+
+Uniform *odd* integer in [-B, B], i.e. 2u+1 for u uniform in
+[-⌈B/2⌉, ⌊(B-1)/2⌋]. Requires B ≥ 1 (no odd integer lies in [0,0]).
+"""
+function rand_odd_pm(rng::AbstractRNG, B::ZElem)
+    lo = -div(B + 1, 2)
+    hi = div(B - 1, 2)
+    return 2*(lo + rand_below(rng, BigInt(hi - lo))) + 1
+end
 
 """
     represent_integer_in_O(N, p; rng=Random.default_rng(), max_tries=1200,
@@ -299,21 +378,56 @@ Solve nrd(r) = N for r ∈ O by random sampling + Cornacchia (fast
 path), falling back to full factorization of `rhs` via
 `sum_two_squares` when `allow_factor` is set or `rhs` has at most
 `factor_digit_cutoff` decimal digits.
+
+Throws [`RepresentIntegerFailure`](@ref) if no solution is found within
+`max_tries` samples.
 """
 function represent_integer_in_O(N::ZElem, p::PInt;
                                 rng::AbstractRNG=Random.default_rng(),
                                 max_tries::Int=1200,
                                 allow_factor::Bool=false,
                                 factor_digit_cutoff::Int=50)::QEltZZ
-    N > 0 || error("RepresentInteger: need N>0, got N=$N")
+    N > 0 || throw(RepresentIntegerFailure("need N>0, got N=$N"))
     pZ = ZZ(p)
     fourN = 4*N
     B = isqrt(div(fourN, pZ))  # floor sqrt(4N/p)
-    twoB = 2*B
+
+    # When 4N already exceeds the digit cutoff, the factor fallback is dead
+    # weight: rhs only drops under the cutoff when p(A2²+A3²) lands within a
+    # relative band of ~10^cutoff/4N of 4N, which for cryptographic N is a
+    # vanishing fraction of samples. Deciding this once here (rather than per
+    # sample) is what licenses the parity restriction below, since the samples
+    # it excludes are reachable only through that fallback.
+    factor_path_dead = !allow_factor && fourN > ZZ(10)^factor_digit_cutoff
+
+    if iszero(B)
+        # 4N < p forces A2 = A3 = 0, so every retry recomputes the identical
+        # rhs = 4N ≡ 0 (mod 4) and the fast path can never fire.
+        factor_path_dead && throw(RepresentIntegerFailure(
+            "4N < p (B=0) with the factor fallback disabled: no solution is " *
+            "reachable and every retry would recompute the same rhs. " *
+            "Increase sbound, or pass allow_factor=true."))
+    end
+
+    twoBbig = BigInt(2*B)   # hoisted: the bound is fixed across all retries
 
     for _ in 1:max_tries
-        A2 = iszero(B) ? ZZ(0) : (rand_below(rng, twoB) - B)
-        A3 = iszero(B) ? ZZ(0) : (rand_below(rng, twoB) - B)
+        local A2, A3
+        if iszero(B)
+            A2 = ZZ(0); A3 = ZZ(0)
+        elseif factor_path_dead
+            # Only opposite-parity (A2,A3) can yield rhs ≡ 1 (mod 4); pick
+            # which coordinate carries the even value uniformly at random.
+            if rand(rng, Bool)
+                A2 = rand_even_pm(rng, B); A3 = rand_odd_pm(rng, B)
+            else
+                A2 = rand_odd_pm(rng, B);  A3 = rand_even_pm(rng, B)
+            end
+        else
+            A2 = rand_below(rng, twoBbig) - B
+            A3 = rand_below(rng, twoBbig) - B
+        end
+
         rhs = fourN - pZ*(A2*A2 + A3*A3)
         rhs <= 0 && continue
 
@@ -322,10 +436,10 @@ function represent_integer_in_O(N::ZElem, p::PInt;
             try
                 A0, A1 = cornacchia_two_squares(rhs; check_prime=false)
 
-                if is_even(A0 - A3) && is_even(A1 - A2)
+                if _is_even(A0 - A3) && _is_even(A1 - A2)
                     r = QEltZZ(A0, A1, A2, A3)
                     (in_order(r) && nrd_q(r, pZ) == N) && return r
-                elseif is_even(A1 - A3) && is_even(A0 - A2)
+                elseif _is_even(A1 - A3) && _is_even(A0 - A2)
                     r = QEltZZ(A1, A0, A2, A3)
                     (in_order(r) && nrd_q(r, pZ) == N) && return r
                 end
@@ -335,22 +449,25 @@ function represent_integer_in_O(N::ZElem, p::PInt;
         end
 
         # ---- OPTIONAL FACTOR FALLBACK (opt-in; full factorization) ----
-        if allow_factor || (Int(flog(rhs, 10)) + 1 <= factor_digit_cutoff)
+        if !factor_path_dead &&
+           (allow_factor || (Int(flog(rhs, 10)) + 1 <= factor_digit_cutoff))
             xy = sum_two_squares(rhs)
             xy === nothing && continue
             A0, A1 = xy
 
-            if is_even(A0 - A3) && is_even(A1 - A2)
+            if _is_even(A0 - A3) && _is_even(A1 - A2)
                 r = QEltZZ(A0, A1, A2, A3)
                 nrd_q(r, pZ) == N && return r
-            elseif is_even(A1 - A3) && is_even(A0 - A2)
+            elseif _is_even(A1 - A3) && _is_even(A0 - A2)
                 r = QEltZZ(A1, A0, A2, A3)
                 nrd_q(r, pZ) == N && return r
             end
         end
     end
 
-    error("RepresentInteger: failed after $max_tries tries. Increase max_tries or restarts (or allow_factor=true).")
+    throw(RepresentIntegerFailure(
+        "failed after $max_tries tries. Increase max_tries or restarts " *
+        "(or allow_factor=true)."))
 end
 
 # ============================================================
@@ -381,8 +498,9 @@ function random_polarization(pZ::ZElem; sbound::Int=20,
     smax = pZ^sbound
     tmax = pZ^(3*sbound)
 
-    s = isone(smax) ? ZZ(1) : (ZZ(1) + rand_below(rng, smax - 1))
-    t = isone(tmax) ? ZZ(1) : (ZZ(1) + rand_below(rng, tmax - 1))
+    # BigInt(...) once per bound rather than once per draw inside rand_below.
+    s = isone(smax) ? ZZ(1) : (ZZ(1) + rand_below(rng, BigInt(smax - 1)))
+    t = isone(tmax) ? ZZ(1) : (ZZ(1) + rand_below(rng, BigInt(tmax - 1)))
 
     N = s*t - 1
     r = represent_integer_in_O(N, pZ; rng=rng, max_tries=max_tries, allow_factor=allow_factor)
@@ -407,9 +525,9 @@ end
 #    Once sbound is fixed, the Cornacchia fast path in RepresentInteger
 #    succeeds on a sample when rhs lands prime and ≡ 1 (mod 4); by the
 #    prime number theorem this happens for a Θ(1/log p) fraction of
-#    samples, so expected tries to succeed scale like O(log p). etries
-#    below is a constant-factor safety margin on top of that estimate,
-#    sized by sbound and p's bit length.
+#    samples, so expected tries to succeed scale like O(log p).
+#    suggest_params applies a constant-factor safety margin on top of
+#    that estimate, sized by sbound and p's bit length.
 # ============================================================
 
 """
@@ -418,6 +536,13 @@ end
 Heuristic default for `--sbound` when the user doesn't supply one:
 the largest sbound with N ≈ p^(4·sbound) staying within roughly
 `target_bits` bits, clamped to [1, 20].
+
+Note the lower clamp wins for large p and `target_bits` is then
+exceeded: a 1421-bit p yields sbound = 1 and hence N ≈ 5700 bits,
+~3.5x over a 1600-bit target. sbound = 1 is already the smallest value
+that keeps s, t non-trivial, so there is nothing below it to pick;
+lower the exponent on the t-bound in `random_polarization` if the norm
+equation needs to be smaller than that.
 """
 function suggest_sbound(p::PInt; target_bits::Int=1600)::Int
     pZ = ZZ(p)
@@ -427,28 +552,27 @@ function suggest_sbound(p::PInt; target_bits::Int=1600)::Int
 end
 
 """
-    suggest_params(p; sbound=20, trials=20, mode=:balanced)
+    suggest_params(p; sbound=20, mode=:balanced) -> (; bits, sbound, max_tries)
 
-Heuristic `max_tries` for RepresentInteger and `restarts_per_trial`
-for random_polarization, scaled from p's bit length and `sbound`.
+Heuristic `max_tries` for RepresentInteger, scaled from p's bit length
+and `sbound`. `mode` trades retry budget against how eagerly a caller
+gives up on a sample and restarts with fresh s,t: `:fast` retries least,
+`:few_restarts` most, `:balanced` in between.
 """
-function suggest_params(p::PInt; sbound::Int=20, trials::Int=20, mode::Symbol=:balanced)
+function suggest_params(p::PInt; sbound::Int=20, mode::Symbol=:balanced)
     pZ = ZZ(p)
     bits = ndigits(pZ, base=2)
-    etries = ceil(Int, 6 * sbound * bits)
+    etries = ceil(Int, 6 * sbound * bits)   # expected-tries estimate, O(log p)
 
-    if mode == :fast
-        max_tries = max(800, etries)
-        restarts_per_trial = 1000
+    max_tries = if mode == :fast
+        max(800, etries)
     elseif mode == :few_restarts
-        max_tries = max(2000, 5 * etries)
-        restarts_per_trial = 80
+        max(2000, 5 * etries)
     else
-        max_tries = max(1200, 3 * etries)
-        restarts_per_trial = 300
+        max(1200, 3 * etries)
     end
 
-    return (; bits, sbound, trials, etries, max_tries, restarts_per_trial, mode)
+    return (; bits, sbound, max_tries)
 end
 
 # ============================================================
@@ -475,7 +599,27 @@ end
 
 Generate N distinct random polarizations for prime p, in parallel
 across all available Julia threads. Start Julia itself with
-`--threads auto` (or `-t auto`) to use all cores.
+`--threads auto` (or `-t auto`) to use all cores — Julia fixes its
+thread count at process start, so this cannot be set from inside the
+script.
+
+Threading is worth using here. Measured on a 24-core machine, 400
+polarizations for a 257-bit p:
+
+    threads    1      2      4      8     24
+    wall     88.9s  44.7s  26.0s  16.0s  11.6s
+    speedup    --   1.99x  3.42x  5.57x  7.67x
+
+Scaling is near-linear to 8 threads and still worth taking to 24. Note
+this depends on `rand_below` staying allocation-light: garbage forces
+global GC pauses, and an earlier word-at-a-time implementation flattened
+the curve past 4 threads (59% of wall time in GC at 24) while barely
+affecting single-threaded cost.
+
+`base_seed` makes a run reproducible **only single-threaded**. With more
+than one thread, which samples get accepted depends on the race between
+threads and the shared result-count check, so runs with the same seed
+differ. Use `-t 1` when you need an exact rerun.
 
 If `on_new_result` is given, it is called as `on_new_result(idx, H)`
 for every newly-accepted, globally-distinct polarization `H` (1-indexed
@@ -502,7 +646,10 @@ function generate_polarizations(p::PInt, N::Int;
 
     nthreads = Threads.nthreads()
 
-    # Independently seeded per-thread RNGs for reproducibility.
+    # Independently seeded per-task RNGs. Note this makes each task's *stream*
+    # deterministic, but not the run as a whole: which samples win the race to
+    # be accepted still varies, so identical seeds reproduce exactly only at
+    # nthreads == 1. See the docstring.
     seed0 = base_seed === nothing ? rand(RandomDevice(), 1:typemax(Int)) : base_seed
     thread_rngs = [Random.Xoshiro(seed0 + 7919*k) for k in 1:nthreads]
 
@@ -540,8 +687,11 @@ function generate_polarizations(p::PInt, N::Int;
                 H = random_polarization(pZ; sbound=sbound, rng=rng,
                                        max_tries=max_tries_resolved, allow_factor=allow_factor)
             catch err
-                msg = sprint(showerror, err)
-                occursin("RepresentInteger", msg) && continue
+                # A sample that exhausted its retry budget is routine: draw
+                # fresh s,t and carry on. Anything else is a real bug and must
+                # propagate. Matching on the type (rather than on the rendered
+                # message) keeps a reworded error from silently becoming fatal.
+                err isa RepresentIntegerFailure && continue
                 rethrow()
             end
 
@@ -589,14 +739,18 @@ end
 
 Filesystem-safe default output filename, always of the form
 "polz_<bits>bit_<digest>_<N>.txt" where <bits> is p's bit length and
-<digest> is an 8-hex-digit hash of p's decimal value. Using bits+hash
-uniformly (rather than p's raw decimal value for small p) keeps
-filenames a consistent, predictable shape across every prime size.
+<digest> is the first 8 hex digits of SHA-256 of p's decimal value.
+Using bits+digest uniformly (rather than p's raw decimal value for
+small p) keeps filenames a consistent, predictable shape across every
+prime size.
+
+SHA-256 rather than `Base.hash`: the latter is not guaranteed stable
+across Julia versions, so the same (p, N) could land in different files
+on different builds.
 """
 function default_output_filename(pZ::ZZRingElem, N::Int)::String
     bits = ndigits(pZ, base=2)
-    s = string(pZ)
-    digest = string(hash(s) & 0xffffffff; base=16, pad=8)
+    digest = bytes2hex(sha256(string(pZ)))[1:8]
     return "polz_$(bits)bit_$(digest)_$(N).txt"
 end
 
@@ -739,14 +893,22 @@ Optional options:
                           suggest_sbound (large for small test p, small
                           for cryptographic-size p). Pass explicitly to
                           override.
-  --outfile PATH         Output file path (default: polz_<p>_<N>.txt)
+  --outfile PATH         Output file path
+                          (default: polz_<bits>bit_<digest>_<N>.txt)
   --max-tries K          Max RepresentInteger attempts per sample
                           (default: auto-computed from p's bit length)
-  --seed S               Base RNG seed (integer) for reproducibility
-                          (default: a fresh OS-random seed each run)
-  --allow-factor          Enable the full-factorization fallback in
-                          RepresentInteger (off by default; can be very
-                          slow / inappropriate at cryptographic size)
+  --seed S               Base RNG seed (integer). Reproduces a run exactly
+                          only when running single-threaded (`-t 1`); with
+                          more threads the accepted samples depend on
+                          inter-thread timing. Default: a fresh OS-random
+                          seed each run.
+  --allow-factor          Force the full-factorization fallback in
+                          RepresentInteger on for every sample (can be very
+                          slow / inappropriate at cryptographic size).
+                          NOTE: even without this flag the fallback runs
+                          automatically whenever rhs has at most 50 decimal
+                          digits, which is reachable for small p with a
+                          small --sbound.
   -h, --help              Show this help and exit.
 
 Note: to use multiple threads, pass `--threads auto` (or `-t auto` /
@@ -754,6 +916,10 @@ Note: to use multiple threads, pass `--threads auto` (or `-t auto` /
 Julia's thread count is fixed at process start, so this script cannot
 set or change it once running:
   julia --threads auto polz_random.jl <p> <N> [options]
+
+Threading pays off: 400 polarizations at a 257-bit p took 88.9s on 1
+thread, 26.0s on 4 and 11.6s on 24 (7.7x). If JULIA_NUM_THREADS is set
+in your environment you already get that many without passing -t.
 
 Examples:
   julia --threads auto polz_random.jl 23 50
