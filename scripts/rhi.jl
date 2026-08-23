@@ -1,7 +1,24 @@
 using Oscar
 
 """
-    default_output_filename(p_big, N)
+    check_p_11mod12(p_big) -> BigInt
+
+Validate that `p_big` is (probably) prime and congruent to 11 mod 12,
+returning it unchanged. The RHI construction in `rhi2` assumes both: p ≡ 3
+(mod 4) is what makes `B_{p,∞}` the algebra ramified at p and ∞ with the
+reduced-norm form used here, and p ≡ 11 (mod 12) is the stronger convention
+shared with `polz_all.jl` and every prime under `data/`, so the scripts accept
+the same inputs. Mirrors `check_p_11mod12` in `scripts/polz_random.jl`.
+"""
+function check_p_11mod12(p_big::BigInt)::BigInt
+    is_probable_prime(ZZ(p_big)) || error("p must be prime; got p=$p_big")
+    mod(p_big, 12) == 11 ||
+        error("p must be 11 mod 12; got p mod 12 = $(mod(p_big, 12))")
+    return p_big
+end
+
+"""
+    default_output_filename(p_big, N, prefix)
 
 Given a prime `p_big` (as a BigInt) and a number `N`, returns the filename used
 for both the polarization input file and the RHI2 output file, matching the
@@ -88,10 +105,15 @@ function file_reader(filename::String)
 
         nums = split(raw)
         if length(nums) >= 6
+            # Non-numeric lines (e.g. the "order basis: [1, i, ...]" header,
+            # which also splits into 6 fields) land here and are skipped.
+            # Catch only parse failures -- a bare `catch` would also swallow
+            # InterruptException, making Ctrl-C during a large read a no-op.
             try
                 values = [_parse_polarization_value(nums[i]) for i in 1:6]
                 push!(polarizations, values)
-            catch
+            catch err
+                err isa ArgumentError || rethrow()
                 continue
             end
         end
@@ -108,10 +130,21 @@ Given `Bp = (-1, -p | Q)` and polarization `param = [u0, v0, w0, x0, y0, z0]`,
 compute the coefficient matrix of the 5-ary refined Humbert invariant
 that does not represent 1.
 
-Returns `nothing` if `param` does not yield a valid form (not
-positive semidefinite, or the reduced form fails the rank/symmetry/
-minimum checks below). On success, returns a named tuple
-`(coeff_matrix, det)`:
+Returns `nothing` if the reduced lattice represents 1 (`minimum(L) <= 1`),
+which is the one legitimate way a well-formed polarization can fail to
+yield the invariant. This is a normal outcome, not an error: measured
+over `data/`, it accounts for ~2% of polarizations at p=227 and ~0.4%
+at p=1619, and none at all at 50 bits and above.
+
+Every other failure -- the form not being positive semidefinite, or the
+LLL-reduced Gram matrix not having rank 5 with a zero last row, or the
+5x5 block not being positive definite -- means the construction itself
+is broken for this `p`, not that this polarization is uninteresting.
+Those raise rather than returning `nothing`; none of them occurred in
+8000 polarizations sampled across `data/polz_small_100k` and
+`data/polz_big_10k`.
+
+On success, returns a named tuple `(coeff_matrix, det)`:
 
   - `coeff_matrix`: the `ZZMatrix` coefficient matrix.
   - `det`: the determinant of the Gram matrix `coeff_matrix .÷ 2`,
@@ -120,9 +153,9 @@ minimum checks below). On success, returns a named tuple
 
 For any valid polarization this determinant equals `2^4 * p^2`,
 independent of the polarization coordinates; it is computed and
-asserted against that closed form on every successful call as a
+checked against that closed form on every successful call as a
 correctness check on the construction, not a per-polarization
-validity filter. Because `p` is fixed for an entire `all_rhi2(p, N)`
+validity filter, and a mismatch raises. Because `p` is fixed for an entire `all_rhi2(p, N)`
 run, `det` is identical across every valid polarization in that run,
 so it carries no discriminating information for bucketing candidates
 (see `all_rhi2`); it is returned here for logging/sanity purposes.
@@ -169,44 +202,61 @@ function rhi2(p::Integer, param::AbstractVector{<:Integer})
         end
     end
 
-    # Check A is positive semidefinite
+    # Check A is positive semidefinite. The RHI construction guarantees
+    # this for every polarization of a prime p = 11 mod 12, so a failure
+    # here is a broken computation (or a p violating that congruence),
+    # not a polarization to skip over.
     V = quadratic_space(QQ, A)
     D = diagonal(V)
     if !all(>=(0), D)
-        println("Not semi-pd")
-        return nothing
+        error("rhi2: Gram matrix is not positive semidefinite (diagonal = $D) for p = $p, param = $param")
     end
 
     Azz = map_entries(x -> ZZ(x//2), A)
     AA = lll_gram(Azz)
 
-    # Check rank, symmetry, and last row
+    # The form has rank 5 in a 6-dimensional space, and lll_gram sorts the
+    # zero vector into the last row. Both are structural, so -- as above --
+    # a failure means the construction is broken rather than that this
+    # polarization should be skipped.
     if rank(AA) != 5 || !is_symmetric(AA) || any(!iszero, AA[6, :])
-        println("non sym")
-        return nothing
+        error("rhi2: LLL-reduced Gram matrix is not rank 5 with a zero last row " *
+              "(rank = $(rank(AA)), symmetric = $(is_symmetric(AA))) for p = $p, param = $param")
     end
 
     # Work with top-left 5×5 submatrix
     B = @view AA[1:5, 1:5]
 
     L = integer_lattice(; gram = B)
-    if is_positive_definite(L) && minimum(L) > 1
-        C = B .* 2
-        det_B = det(B)
 
-        # Structural invariant of this construction: for any valid
-        # polarization the Gram matrix's determinant is exactly
-        # 2^4 * p^2, independent of the polarization coordinates. This
-        # is not a validity filter (unlike the checks above) -- a
-        # violation means something is wrong with the computation
-        # itself, so it is asserted rather than treated as a rejected
-        # polarization.
-        expected_det = 16 * BigInt(p)^2
-        @assert BigInt(det_B) == expected_det "rhi2: det(Gram matrix) = $(det_B), expected 2^4*p^2 = $(expected_det) for p = $p, param = $param"
-
-        return (coeff_matrix = C, det = det_B)
+    # Positive definiteness of the rank-5 block is structural, like the
+    # checks above.
+    if !is_positive_definite(L)
+        error("rhi2: rank-5 block is not positive definite for p = $p, param = $param")
     end
-    return nothing
+
+    # This one is the genuine per-polarization filter: the refined Humbert
+    # invariant we want is the form that does *not* represent 1. A lattice
+    # with minimum 1 is a normal, expected outcome, so return nothing.
+    if minimum(L) <= 1
+        return nothing
+    end
+
+    C = B .* 2
+    det_B = det(B)
+
+    # Structural invariant of this construction: for any valid
+    # polarization the Gram matrix's determinant is exactly 2^4 * p^2,
+    # independent of the polarization coordinates. A violation means
+    # something is wrong with the computation itself. Raised rather than
+    # `@assert`ed so it cannot be compiled out under --check-bounds=no or
+    # a future -O setting that elides assertions.
+    expected_det = 16 * BigInt(p)^2
+    if BigInt(det_B) != expected_det
+        error("rhi2: det(Gram matrix) = $(det_B), expected 2^4*p^2 = $(expected_det) for p = $p, param = $param")
+    end
+
+    return (coeff_matrix = C, det = det_B)
 end
 
 
@@ -268,10 +318,32 @@ _det_big_mat(T::Matrix{BigInt}) = BigInt(det(matrix(ZZ, T)))
 # isometry search would be quadratic in the number of candidates, so
 # candidates are first bucketed on a cheap, genuine isometry invariant
 # (a quantity that is provably equal for isometric lattices, so
-# bucketing on it can never produce a false negative): the first
-# `Tmax` coefficients of the theta series (`theta_initials` below).
-# Only forms sharing this value are ever compared with the exact
-# isometry test.
+# bucketing on it can never produce a false negative). Only forms
+# sharing this value are ever compared with the exact isometry test.
+#
+# The key used here is the *minimum-anchored* theta profile
+# (`theta_anchored` below): the lattice minimum `m` together with the
+# vector counts at squared lengths `m, m+1, ..., m+Tmax`. Both parts
+# are genuine isometry invariants, so the no-false-negative property
+# is preserved.
+#
+# The anchoring is what makes the key useful. An *absolute* cutoff --
+# counting vectors of squared length `1..Tmax` for a small fixed
+# `Tmax` -- is worthless on this data, because `rhi2` only accepts
+# lattices with `minimum(L) > 1` and `det(Gram) = 16*p^2` pushes the
+# minimum up with `p`. Measured on the corpora under `data/`:
+#
+#     data/polz_small_100k, p=227    min(L) ~ 5..16      1467 candidates -> 9 distinct keys
+#     data/polz_small_100k, p=1619   min(L) larger       1495 candidates -> 3 distinct keys
+#     data/polz_big_10k, 50-bit      min(L) ~ 1e6        1500 candidates -> 1 distinct key
+#     data/polz_big_10k, 100-bit     min(L) ~ 1e12       every key all-zero
+#
+# i.e. at 50 bits and above every candidate hashed to the same
+# all-zero key and the bucketing did no work at all. Anchoring at the
+# minimum instead gives 1077 / 1474 / 799 distinct keys on the same
+# three samples, for the same cost. End to end on 3000 polarizations
+# at p=227 that is 1_311 exact isometry calls instead of 1_264_425,
+# for an identical class count.
 #
 # The determinant of the Gram matrix is also a genuine isometry
 # invariant, but is *not* used as a bucket key here: `rhi2` shows it
@@ -279,44 +351,43 @@ _det_big_mat(T::Matrix{BigInt}) = BigInt(det(matrix(ZZ, T)))
 # the duration of one `all_rhi2(p, N)` run, so every candidate in a
 # given run shares the same determinant. Bucketing on a value that
 # never varies within a run does no discriminating work -- it would
-# only add a constant key to every bucket lookup and hash.
+# only add a constant key to every bucket lookup and hash. The Smith
+# normal form of the Gram matrix is constant within a run for the same
+# reason (measured: 1 distinct value across every sample above).
 #
-# Local genus symbols and the kissing number are not used as
-# additional bucketing keys: a genus symbol at `p` is expensive to
-# compute for the large primes this file supports (see
-# `parse_big_prime`), and the kissing number is already implied by
-# `theta_initials` whenever the lattice's minimal norm is `<= Tmax`
-# (it is `theta[m]` for minimal norm `m`).
-const _THETA_FALLBACK_WARNED = Ref(false)
+# Local genus symbols are not used either: a genus symbol at `p` is
+# expensive to compute for the large primes this file supports (see
+# `parse_big_prime`). The kissing number needs no separate key -- it
+# is the first entry of the anchored profile by construction.
 
 """
-    theta_initials(L, Tmax::Int) -> Vector{Int}
+    theta_anchored(L, Tmax::Int) -> Tuple{ZZRingElem, Vector{Int}}
 
-`[r_1,...,r_Tmax]`, where `r_k` is the number of vectors of `L` of
-squared length `k` (the first `Tmax` theta-series coefficients),
-computed via Hecke's Fincke-Pohst `short_vectors`. `short_vectors`
-returns vectors up to sign, so each is counted twice. Isometric
-lattices have identical theta series, so this is a genuine isometry
-invariant.
+`(m, [r_m, r_{m+1}, ..., r_{m+Tmax}])`, where `m = minimum(L)` and
+`r_k` is the number of vectors of `L` of squared length `k`, computed
+via Hecke's Fincke-Pohst `short_vectors`. `short_vectors` returns
+vectors up to sign, so each is counted twice; `r_m` is therefore the
+kissing number.
+
+Isometric lattices have the same minimum and the same theta series, so
+both components are genuine isometry invariants and this is safe to
+bucket on. Unlike an absolute `1..Tmax` window it stays informative
+however large the entries of the Gram matrix grow -- see the
+"Bucketing invariants" note above for the measurements motivating it.
 """
-function theta_initials(L, Tmax::Int)
-    counts = zeros(Int, Tmax)
-    sv = try
-        short_vectors(L, Tmax)
-    catch err
-        if !_THETA_FALLBACK_WARNED[]
-            _THETA_FALLBACK_WARNED[] = true
-            @warn "short_vectors(L, Tmax) failed; falling back to short_vectors(L, 0, Tmax) for the rest of this run." exception=(err, catch_backtrace())
-        end
-        short_vectors(L, 0, Tmax)
-    end
-    for entry in sv
-        n = Int(entry[2])
-        if 1 <= n <= Tmax
-            counts[n] += 2
+function theta_anchored(L, Tmax::Int)
+    # Hecke returns the minimum as a QQFieldElem. Every Gram matrix reaching
+    # here is a ZZMatrix, so all norms are integral; narrowing to ZZRingElem
+    # keeps the bucket key exactly hashable and matches the counts' index type.
+    m = ZZ(minimum(L))
+    counts = zeros(Int, Tmax + 1)
+    for entry in short_vectors(L, m, m + Tmax)
+        n = Int(ZZ(entry[2]) - m)
+        if 0 <= n <= Tmax
+            counts[n+1] += 2
         end
     end
-    return counts
+    return (m, counts)
 end
 
 function _inv_unimodular_bigint(T::Matrix{BigInt})
@@ -410,7 +481,7 @@ function _hecke_isometric(A::ZZMatrix, B::ZZMatrix; depth::Int=0, bacher_depth::
 end
 
 """
-    all_rhi2(p, N; verify=true, Tmax=6)
+    all_rhi2(p, N; verify=true, Tmax=40)
 
 Given a prime `p` congruent to 11 mod 12, read the polarizations for
 `p` from the `N`-indexed "polz" input file (see
@@ -418,12 +489,16 @@ Given a prime `p` congruent to 11 mod 12, read the polarizations for
 invariant coefficient matrix for each via `rhi2`, and write one entry
 per isometry-class representative found to the matching "RHI2" output
 file, along with summary statistics (polarizations checked, RHI's
-computed, duplicate counts per type, elapsed time).
+computed, rejection counts by reason, duplicate counts per type,
+elapsed time).
+
+Errors if the input file's header prime does not match `p`, rather
+than silently producing an empty result.
 
 Isometry classes are found in two stages:
 1. An exact hash lookup on the flattened Gram matrix entries catches
    identical forms in O(1).
-2. Remaining candidates are bucketed on `theta_initials(L, Tmax)`
+2. Remaining candidates are bucketed on `theta_anchored(L, Tmax)`
    -- a genuine isometry invariant -- and `_hecke_isometric` (an
    exact Plesken-Souvignier isometry test) is only run between forms
    sharing a bucket. The Gram matrix determinant is also a genuine
@@ -435,51 +510,76 @@ Isometry classes are found in two stages:
 isometry transform Hecke returns against the original Gram matrices
 before trusting it.
 
-`Tmax` sets `theta_initials`'s theta-series cutoff (4:10 is a
-reasonable range).
+`Tmax` sets how many squared lengths above the lattice minimum
+`theta_anchored` profiles. The default of 40 was chosen by measurement
+across `data/polz_small_100k` and `data/polz_big_10k` -- see the
+"Bucketing invariants" note above. Smaller values degrade gracefully
+(they only make buckets coarser, never incorrect) but cost real time:
+at `Tmax=5` the same p=227 sample yields 196 buckets instead of 1077.
 
 Limitations:
 - This function is single-threaded by design. Its hot paths (`rhi2`'s
-  `lll_gram`/`is_positive_definite`/`minimum`, `theta_initials`'s
+  `lll_gram`/`is_positive_definite`/`minimum`, `theta_anchored`'s
   `short_vectors`, `det`, and `_hecke_isometric`'s `Hecke.isometry`)
   all call into FLINT via Nemo/Hecke, whose C-level state is not
   documented as safe for concurrent calls from independent Julia
   OS-threads. To parallelize across polarizations, use `Distributed.jl`
   (separate OS processes, so no shared FLINT state) rather than
-  `Threads.@threads`.
-- Theta-series bucketing rules out false negatives but is not a full
-  isometry invariant on its own; forms sharing a bucket still require
-  the exact `_hecke_isometric` test, so a run with many candidates
-  sharing the same theta initials will still be slow.
+  `Threads.@threads`. Note the workload is also embarrassingly
+  parallel *across primes*: one process per input file needs no
+  coordination at all.
+- Theta bucketing rules out false negatives but is not a full isometry
+  invariant on its own; forms sharing a bucket still require the exact
+  `_hecke_isometric` test, so a run with many candidates sharing the
+  same anchored profile will still be slow.
 """
-function all_rhi2(p::Integer, N::Integer; verify::Bool=true, Tmax::Int=6)
+function all_rhi2(p::Integer, N::Integer; verify::Bool=true, Tmax::Int=40)
     start_time = time()
     p_big = BigInt(p)
+    check_p_11mod12(p_big)
     pdisp = condensed_prime_repr(p_big)
     println("working with prime ", pdisp)
 
     input_filename = default_output_filename(p_big, N, "polz")
-    output_filename = "./" * default_output_filename(p_big, N, "RHI2")
+    output_filename = default_output_filename(p_big, N, "RHI2")
+
+    # Read the input *before* opening the output for writing: `open(_, "w")`
+    # truncates, so doing it the other way round leaves an empty RHI2 file
+    # behind whenever the input is missing or unreadable.
+    isfile(input_filename) ||
+        error("all_rhi2: no polarization file $(input_filename) in $(pwd()). " *
+              "Input paths are relative to the working directory, so run this " *
+              "from the directory holding the polz_* files.")
+    prime, params = file_reader(input_filename)
+    count = length(params)
+
+    prime === nothing &&
+        error("all_rhi2: $(input_filename) has no `p = ...` header line.")
+    prime == p_big ||
+        error("all_rhi2: $(input_filename) is for p = $(condensed_prime_repr(prime)), " *
+              "but was asked for p = $(pdisp).")
 
     file = open(output_filename, "w")
     try
-        println(file, "p = ", p, "\n")
+        println(file, "p = ", p_big, "\n")
 
         idx = 0   # Counting unique forms.
         total = 0 # Total RHIs computed.
+        represents_one = 0  # Polarizations rejected by rhi2's minimum(L) > 1 filter.
 
         # unique_forms[k] holds the data for the k-th unique form found so far:
         #   coeff_matrix - the ZZMatrix coefficient matrix
-        #   theta        - theta_initials(L, Tmax): first Tmax theta-series
-        #                  coefficients, used as the bucket key (see the
-        #                  "Bucketing invariants" note above).
+        #   theta        - theta_anchored(L, Tmax): the lattice minimum plus the
+        #                  vector counts at the next Tmax squared lengths, used
+        #                  as the bucket key (see the "Bucketing invariants"
+        #                  note above).
         unique_forms = NamedTuple{(:coeff_matrix, :theta),
-                                   Tuple{ZZMatrix,Vector{Int}}}[]
+                                   Tuple{ZZMatrix,Tuple{ZZRingElem,Vector{Int}}}}[]
 
-        # Maps a theta_initials key to the list of indices (into unique_forms)
+        # Maps a theta_anchored key to the list of indices (into unique_forms)
         # of unique forms sharing it. Only forms sharing a bucket are ever
         # compared via the expensive isometry call.
-        theta_buckets = Dict{Vector{Int},Vector{Int}}()
+        theta_buckets = Dict{Tuple{ZZRingElem,Vector{Int}},Vector{Int}}()
 
         # Flattened Gram entries (as BigInt, since entries can exceed Int64 once
         # p is large) => index into unique_forms. An O(1) hash check that
@@ -488,119 +588,118 @@ function all_rhi2(p::Integer, N::Integer; verify::Bool=true, Tmax::Int=6)
 
         pol_count = Dict{Int,Int}()
 
-        prime, params = file_reader(input_filename)
-        count = length(params)
+        for param in params
+            res = rhi2(p_big, param)  # (coeff_matrix, det) or nothing.
+            if res === nothing
+                represents_one += 1
+            else
+                coeff_matrix = res.coeff_matrix
+                total += 1
+                is_unique = true
 
-        if prime == p
-            for param in params
-                res = rhi2(p, param)  # (coeff_matrix, det) or nothing.
-                if res !== nothing
-                    coeff_matrix = res.coeff_matrix
-                    total += 1
-                    is_unique = true
+                # O(1) exact-equality check via hash lookup.
+                exact_key = NTuple{25,BigInt}(vec(_mat_big(coeff_matrix)))
+                existing_k = get(exact_lookup, exact_key, 0)
+                if existing_k != 0
+                    is_unique = false
+                    pol_count[existing_k] = get(pol_count, existing_k, 1) + 1
+                end
 
-                    # O(1) exact-equality check via hash lookup.
-                    exact_key = NTuple{25,BigInt}(vec(_mat_big(coeff_matrix)))
-                    existing_k = get(exact_lookup, exact_key, 0)
-                    if existing_k != 0
-                        is_unique = false
-                        pol_count[existing_k] = get(pol_count, existing_k, 1) + 1
-                    end
+                local theta_val, bucket_key
+                if is_unique
+                    # theta_anchored as a zero-risk isometry-invariant
+                    # filter -- see the note on unique_forms above.
+                    L = integer_lattice(; gram = coeff_matrix .÷ 2)
+                    theta_val = theta_anchored(L, Tmax)
+                    bucket_key = theta_val
 
-                    local theta_val, bucket_key
-                    if is_unique
-                        # theta_initials as a zero-risk isometry-invariant
-                        # filter -- see the note on unique_forms above.
-                        L = integer_lattice(; gram = coeff_matrix .÷ 2)
-                        theta_val = theta_initials(L, Tmax)
-                        bucket_key = theta_val
-
-                        # Only compare against forms sharing theta initials;
-                        # no isometric lattice can fall outside this bucket.
-                        # Every candidate in the bucket still gets the exact
-                        # isometry test below -- there is no further
-                        # pre-filter, because the diagonal of an LLL-reduced
-                        # Gram matrix is not itself a genuine isometry
-                        # invariant (LLL-reduced bases are not canonical, so
-                        # isometric lattices reduced from different starting
-                        # bases can land on different diagonals).
-                        candidates = get(theta_buckets, bucket_key, Int[])
-                        for k in candidates
-                            u = unique_forms[k]
-                            # Direct Hecke Plesken-Souvignier isometry test,
-                            # skipping Oscar's high-level is_isometric wrapper
-                            # -- see _hecke_isometric's docstring.
-                            if _hecke_isometric(coeff_matrix, u.coeff_matrix; verify=verify)
-                                is_unique = false
-                                pol_count[k] = get(pol_count, k, 1) + 1
-                                break
-                            end
+                    # Only compare against forms sharing the anchored theta
+                    # profile; no isometric lattice can fall outside this
+                    # bucket.
+                    # Every candidate in the bucket still gets the exact
+                    # isometry test below -- there is no further
+                    # pre-filter, because the diagonal of an LLL-reduced
+                    # Gram matrix is not itself a genuine isometry
+                    # invariant (LLL-reduced bases are not canonical, so
+                    # isometric lattices reduced from different starting
+                    # bases can land on different diagonals).
+                    candidates = get(theta_buckets, bucket_key, Int[])
+                    for k in candidates
+                        u = unique_forms[k]
+                        # Direct Hecke Plesken-Souvignier isometry test,
+                        # skipping Oscar's high-level is_isometric wrapper
+                        # -- see _hecke_isometric's docstring.
+                        if _hecke_isometric(coeff_matrix, u.coeff_matrix; verify=verify)
+                            is_unique = false
+                            pol_count[k] = get(pol_count, k, 1) + 1
+                            break
                         end
                     end
+                end
 
-                    if is_unique
-                        idx += 1
-                        println(file, "Type ", idx)
-                        # s4 = param[4] >= 0 ? "+" : "-"
-                        # s5 = param[5] >= 0 ? "+" : "-"
-                        # s6 = param[6] >= 0 ? "+" : "-"
-                        # a4 = abs(param[4])
-                        # a5 = abs(param[5])
-                        # a6 = abs(param[6])
+                if is_unique
+                    idx += 1
+                    println(file, "Type ", idx)
+                    # s4 = param[4] >= 0 ? "+" : "-"
+                    # s5 = param[5] >= 0 ? "+" : "-"
+                    # s6 = param[6] >= 0 ? "+" : "-"
+                    # a4 = abs(param[4])
+                    # a5 = abs(param[5])
+                    # a6 = abs(param[6])
 
-                        # s4b = (-param[4]) >= 0 ? "+" : "-"
-                        # s5b = (-param[5]) >= 0 ? "+" : "-"
-                        # s6b = (-param[6]) >= 0 ? "+" : "-"
-                        # a4b = abs(-param[4])
-                        # a5b = abs(-param[5])
-                        # a6b = abs(-param[6])
+                    # s4b = (-param[4]) >= 0 ? "+" : "-"
+                    # s5b = (-param[5]) >= 0 ? "+" : "-"
+                    # s6b = (-param[6]) >= 0 ? "+" : "-"
+                    # a4b = abs(-param[4])
+                    # a5b = abs(-param[5])
+                    # a6b = abs(-param[6])
 
-                        # println(
-                        #     file,
-                        #     "θ = [",
-                        #     param[1],
-                        #     "  ",
-                        #     param[3],
-                        #     s4,
-                        #     a4,
-                        #     "β₁",
-                        #     s5,
-                        #     a5,
-                        #     "β₂",
-                        #     s6,
-                        #     a6,
-                        #     "β₃]",
-                        # )
-                        # println(
-                        #     file,
-                        #     "    [",
-                        #     param[3],
-                        #     s4b,
-                        #     a4b,
-                        #     "β₁",
-                        #     s5b,
-                        #     a5b,
-                        #     "β₂",
-                        #     s6b,
-                        #     a6b,
-                        #     "β₃  ",
-                        #     param[2],
-                        #     "]",
-                        # )
+                    # println(
+                    #     file,
+                    #     "θ = [",
+                    #     param[1],
+                    #     "  ",
+                    #     param[3],
+                    #     s4,
+                    #     a4,
+                    #     "β₁",
+                    #     s5,
+                    #     a5,
+                    #     "β₂",
+                    #     s6,
+                    #     a6,
+                    #     "β₃]",
+                    # )
+                    # println(
+                    #     file,
+                    #     "    [",
+                    #     param[3],
+                    #     s4b,
+                    #     a4b,
+                    #     "β₁",
+                    #     s5b,
+                    #     a5b,
+                    #     "β₂",
+                    #     s6b,
+                    #     a6b,
+                    #     "β₃  ",
+                    #     param[2],
+                    #     "]",
+                    # )
 
-                        push!(unique_forms, (coeff_matrix = coeff_matrix, theta = theta_val))
-                        push!(get!(theta_buckets, bucket_key, Int[]), idx)
-                        exact_lookup[exact_key] = idx
+                    push!(unique_forms, (coeff_matrix = coeff_matrix, theta = theta_val))
+                    push!(get!(theta_buckets, bucket_key, Int[]), idx)
+                    exact_lookup[exact_key] = idx
 
-                        q = poly_form(coeff_matrix)
-                        println(file, "q(A,θ) = ", q, "\n")
-                    end
+                    q = poly_form(coeff_matrix)
+                    println(file, "q(A,θ) = ", q, "\n")
                 end
             end
-        end                
+        end
 
         println(file, "total polarizations checked: ", count)
-        println(file, "total RHI's computed: ", total, "\n")
+        println(file, "total RHI's computed: ", total)
+        println(file, "polarizations whose RHI represents 1 (skipped): ", represents_one, "\n")
         println(file, "polarization leading to same type: ", pol_count, "\n")
 
         end_time = time()
@@ -609,6 +708,11 @@ function all_rhi2(p::Integer, N::Integer; verify::Bool=true, Tmax::Int=6)
         minutes = floor((elapsed_time % 3600) / 60)
         seconds = round(elapsed_time % 60)
         println(file, "Total run time: ", hours, " hrs ", minutes, " min ", seconds, " sec")
+    catch
+        # A run can be hours long; make a partial file self-identifying rather
+        # than leaving one that merely looks short.
+        println(file, "\n# ABORTED: run failed before completion; output above is partial.")
+        rethrow()
     finally
         close(file)
     end
