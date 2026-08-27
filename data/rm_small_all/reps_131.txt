@@ -1,0 +1,2491 @@
+p = 131
+D = 100
+max_nodes = 300000
+
+61 square-free integer(s) in [1, 100] to test
+[1, 2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19, 21, 22, 23, 26, 29, 30, 31, 33, 34, 35, 37, 38, 39, 41, 42, 43, 46, 47, 51, 53, 55, 57, 58, 59, 61, 62, 65, 66, 67, 69, 70, 71, 73, 74, 77, 78, 79, 82, 83, 85, 86, 87, 89, 91, 93, 94, 95, 97]
+
+Type 1:
+primitively represented square-free n ≤ 100 (20 of 61)
+[1, 5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 2:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 3:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 4:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 5:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 6:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 7:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 8:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 9:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 10:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 11:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 12:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 13:
+primitively represented square-free n ≤ 100 (19 of 61)
+[1, 5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 14:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 15:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 16:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 17:
+primitively represented square-free n ≤ 100 (14 of 61)
+[17, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 18:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 19:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 20:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 21:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 22:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 23:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 24:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 25:
+primitively represented square-free n ≤ 100 (10 of 61)
+[53, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 26:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 27:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 28:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 29:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 30:
+primitively represented square-free n ≤ 100 (19 of 61)
+[1, 5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 31:
+primitively represented square-free n ≤ 100 (20 of 61)
+[1, 5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 32:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 33:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 34:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 35:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 36:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 37:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 38:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 39:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 40:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 41:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 42:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 43:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 44:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 45:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 17, 29, 33, 37, 41, 53, 57, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 46:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 47:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 48:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 49:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 50:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 51:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 52:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 17, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 53:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 54:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 55:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 56:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 57:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 58:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 59:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 60:
+primitively represented square-free n ≤ 100 (19 of 61)
+[1, 5, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 61:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 62:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 63:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 64:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 65:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 66:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 67:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 68:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 69:
+primitively represented square-free n ≤ 100 (20 of 61)
+[1, 5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 70:
+primitively represented square-free n ≤ 100 (19 of 61)
+[1, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 71:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 72:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 73:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 17, 29, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 74:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 75:
+primitively represented square-free n ≤ 100 (19 of 61)
+[1, 5, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 76:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 77:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 78:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 79:
+primitively represented square-free n ≤ 100 (15 of 61)
+[5, 17, 21, 33, 41, 53, 57, 61, 69, 73, 77, 85, 89, 93, 97]
+
+Type 80:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 81:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 82:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 83:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 84:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 85:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 86:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 87:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 88:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 89:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 90:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 91:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 92:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 93:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 94:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 13, 17, 21, 29, 33, 37, 41, 57, 61, 69, 73, 77, 85, 89, 93, 97]
+
+Type 95:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 96:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 97:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 98:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 99:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 100:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 101:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 102:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 103:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 104:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 105:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 106:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 107:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 108:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 109:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 110:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 111:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 112:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 5, 13, 17, 29, 33, 37, 41, 53, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 113:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 114:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 115:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 116:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 117:
+primitively represented square-free n ≤ 100 (15 of 61)
+[5, 21, 29, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 118:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 119:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 120:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 121:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 122:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 123:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 124:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 125:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 126:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 127:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 17, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 128:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 129:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 130:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 131:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 132:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 133:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 134:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 135:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 136:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 137:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 138:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 139:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 140:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 141:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 142:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 143:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 17, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 144:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 145:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 146:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 147:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 148:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 149:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 150:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 151:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 152:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 153:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 154:
+primitively represented square-free n ≤ 100 (15 of 61)
+[17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 155:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 156:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 157:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 158:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 159:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 160:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 161:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 162:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 163:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 164:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 165:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 166:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 167:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 168:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 169:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 170:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 171:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 172:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 173:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 174:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 175:
+primitively represented square-free n ≤ 100 (10 of 61)
+[1, 17, 33, 41, 57, 65, 73, 89, 93, 97]
+
+Type 176:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 177:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 178:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 179:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 180:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 181:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 182:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 183:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 184:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 185:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 186:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 187:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 188:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 189:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 190:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 191:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 192:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 193:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 194:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 195:
+primitively represented square-free n ≤ 100 (15 of 61)
+[5, 17, 21, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 196:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 197:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 198:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 199:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 200:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 201:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 202:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 203:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 204:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 205:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 206:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 207:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 5, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 73, 77, 85, 89, 93, 97]
+
+Type 208:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 209:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 210:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 211:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 212:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 213:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 214:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 215:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 216:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 5, 13, 17, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 217:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 218:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 219:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 220:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 221:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 222:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 223:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 224:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 225:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 226:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 227:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 228:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 229:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 230:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 231:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 232:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 233:
+primitively represented square-free n ≤ 100 (15 of 61)
+[5, 17, 33, 37, 41, 53, 57, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 234:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 235:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 236:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 237:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 13, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 238:
+primitively represented square-free n ≤ 100 (16 of 61)
+[5, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 239:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 240:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 241:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 242:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 243:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 244:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 245:
+primitively represented square-free n ≤ 100 (20 of 61)
+[1, 5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 246:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 247:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 248:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 249:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 250:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 251:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 252:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 253:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 254:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 255:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 256:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 257:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 258:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 259:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 260:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 261:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 262:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 263:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 264:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 265:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 266:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 267:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 268:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 269:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 270:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 271:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 272:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 273:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 274:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 275:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 276:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 277:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 278:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 279:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 280:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 281:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 282:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 283:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 284:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 285:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 286:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 287:
+primitively represented square-free n ≤ 100 (12 of 61)
+[33, 37, 53, 57, 61, 65, 69, 73, 85, 89, 93, 97]
+
+Type 288:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 289:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 290:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 291:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 292:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 293:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 294:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 295:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 296:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 297:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 298:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 299:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 300:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 301:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 302:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 303:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 304:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 305:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 306:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 307:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 308:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 309:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 310:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 311:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 312:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 313:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 314:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 315:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 316:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 317:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 318:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 319:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 320:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 321:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 322:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 323:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 324:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 325:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 326:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 327:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 328:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 329:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 330:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 331:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 332:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 333:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 334:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 335:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 336:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 337:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 338:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 339:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 340:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 341:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 342:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 343:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 344:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 345:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 346:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 347:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 348:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 349:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 350:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 351:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 352:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 353:
+primitively represented square-free n ≤ 100 (16 of 61)
+[5, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 354:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 355:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 356:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 357:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 358:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 359:
+primitively represented square-free n ≤ 100 (15 of 61)
+[17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 360:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 361:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 362:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 17, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 363:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 364:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 365:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 366:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 367:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 17, 21, 29, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 368:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 369:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 370:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 371:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 372:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 373:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 374:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 375:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 376:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 377:
+primitively represented square-free n ≤ 100 (19 of 61)
+[5, 13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 378:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 379:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 380:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 381:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 382:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 383:
+primitively represented square-free n ≤ 100 (14 of 61)
+[33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 384:
+primitively represented square-free n ≤ 100 (14 of 61)
+[1, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 385:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 386:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 387:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 388:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 389:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 390:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 391:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 392:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 393:
+primitively represented square-free n ≤ 100 (13 of 61)
+[13, 21, 37, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 394:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 395:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 396:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 397:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 398:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 399:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 400:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 401:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 402:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 403:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 404:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 405:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 17, 21, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 406:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 407:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 408:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 409:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 410:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 411:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 412:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 413:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 414:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 415:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 416:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 417:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 418:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 419:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 420:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 421:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 422:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 423:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 424:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 425:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 426:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 427:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 17, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 428:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 429:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 430:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 431:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 432:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 433:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 13, 17, 21, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 434:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 435:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 436:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 437:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 438:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 439:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 440:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 441:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 21, 29, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 442:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 443:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 444:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 445:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 446:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 447:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 448:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 449:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 450:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 451:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 452:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 453:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 454:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 455:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 456:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 457:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 458:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 459:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 460:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 461:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 462:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 463:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 464:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 465:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 466:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 467:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 468:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 469:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 470:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 471:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 472:
+primitively represented square-free n ≤ 100 (16 of 61)
+[5, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 473:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 474:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 475:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 476:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 477:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 478:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 479:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 480:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 481:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 482:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 483:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 484:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 485:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 486:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 17, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 487:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 488:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 489:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 490:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 491:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 492:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 493:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 494:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 495:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 496:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 497:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 498:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 499:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 500:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 501:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 502:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 503:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 29, 33, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 504:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 505:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 506:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 507:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 508:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 509:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 510:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 511:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 512:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 513:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 514:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 515:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 516:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 517:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 518:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 519:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 520:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 521:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 522:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 523:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 524:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 525:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 526:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 527:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 528:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 529:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 530:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 531:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 532:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 533:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 534:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 535:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 536:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 537:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 538:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 539:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 540:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 541:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 542:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 543:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 544:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 545:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 13, 21, 29, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 546:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 547:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 548:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 549:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 550:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 551:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 552:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 553:
+primitively represented square-free n ≤ 100 (17 of 61)
+[5, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 554:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 555:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 556:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 557:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 558:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 559:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 560:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 561:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 562:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 563:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 564:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 565:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 566:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 567:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 568:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 569:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 570:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 571:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 572:
+primitively represented square-free n ≤ 100 (16 of 61)
+[13, 17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 573:
+primitively represented square-free n ≤ 100 (16 of 61)
+[21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 574:
+primitively represented square-free n ≤ 100 (12 of 61)
+[1, 21, 29, 37, 57, 61, 65, 69, 73, 85, 89, 97]
+
+Type 575:
+primitively represented square-free n ≤ 100 (17 of 61)
+[1, 13, 21, 29, 33, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 576:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 577:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 578:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 579:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 580:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 581:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 582:
+primitively represented square-free n ≤ 100 (15 of 61)
+[29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 583:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 584:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 585:
+primitively represented square-free n ≤ 100 (18 of 61)
+[5, 13, 17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 586:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 587:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 588:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 589:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 590:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 591:
+primitively represented square-free n ≤ 100 (17 of 61)
+[17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 592:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 593:
+primitively represented square-free n ≤ 100 (16 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 594:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 595:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 596:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 597:
+primitively represented square-free n ≤ 100 (13 of 61)
+[1, 17, 41, 53, 57, 61, 65, 69, 73, 85, 89, 93, 97]
+
+Type 598:
+primitively represented square-free n ≤ 100 (15 of 61)
+[17, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 89, 93, 97]
+
+Type 599:
+primitively represented square-free n ≤ 100 (18 of 61)
+[1, 13, 17, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 600:
+primitively represented square-free n ≤ 100 (18 of 61)
+[13, 17, 21, 29, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 601:
+primitively represented square-free n ≤ 100 (14 of 61)
+[1, 29, 33, 37, 41, 53, 57, 69, 73, 77, 85, 89, 93, 97]
+
+Type 602:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 85, 89, 93, 97]
+
+Type 603:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 17, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 604:
+primitively represented square-free n ≤ 100 (11 of 61)
+[53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 605:
+primitively represented square-free n ≤ 100 (13 of 61)
+[1, 17, 33, 41, 57, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 606:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 21, 29, 33, 41, 53, 57, 61, 65, 69, 73, 85, 89, 93, 97]
+
+Type 607:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 17, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 608:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 13, 21, 33, 37, 53, 57, 61, 69, 73, 77, 85, 89, 93, 97]
+
+Type 609:
+primitively represented square-free n ≤ 100 (14 of 61)
+[1, 29, 33, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 97]
+
+Type 610:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 611:
+primitively represented square-free n ≤ 100 (17 of 61)
+[13, 17, 21, 29, 33, 37, 41, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 612:
+primitively represented square-free n ≤ 100 (14 of 61)
+[1, 17, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 613:
+primitively represented square-free n ≤ 100 (15 of 61)
+[21, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 614:
+primitively represented square-free n ≤ 100 (15 of 61)
+[13, 17, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 615:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 21, 29, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 616:
+primitively represented square-free n ≤ 100 (13 of 61)
+[1, 29, 37, 41, 53, 57, 65, 73, 77, 85, 89, 93, 97]
+
+Type 617:
+primitively represented square-free n ≤ 100 (13 of 61)
+[21, 33, 37, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 618:
+primitively represented square-free n ≤ 100 (16 of 61)
+[1, 13, 21, 33, 37, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 619:
+primitively represented square-free n ≤ 100 (15 of 61)
+[1, 33, 37, 41, 53, 57, 61, 65, 69, 73, 77, 85, 89, 93, 97]
+
+Type 620:
+primitively represented square-free n ≤ 100 (12 of 61)
+[1, 33, 37, 41, 57, 61, 65, 73, 85, 89, 93, 97]
+
+Type 621:
+primitively represented square-free n ≤ 100 (13 of 61)
+[1, 13, 21, 37, 57, 61, 65, 69, 73, 85, 89, 93, 97]
+
