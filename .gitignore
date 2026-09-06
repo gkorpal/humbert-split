@@ -34,3 +34,19 @@ JuliaLocalPreferences.toml
 # merge.sh, so they stay untracked. Scoped to this directory: .txt under the
 # other data/ subdirectories are tracked.
 data/polz_big_100k/*.txt
+
+# The 11 files from 500bit up in data/rhi_big_100k/ likewise ship as split
+# pieces and are reproducible via that directory's merge.sh. The nine smaller
+# files there are under the limit and are tracked whole, so this list names the
+# split ones individually rather than ignoring *.txt.
+data/rhi_big_100k/RHI2_1000bit_faa1c19f_100000.txt
+data/rhi_big_100k/RHI2_500bit_38a8d210_100000.txt
+data/rhi_big_100k/RHI2_550bit_87cb00ac_100000.txt
+data/rhi_big_100k/RHI2_600bit_a1788bac_100000.txt
+data/rhi_big_100k/RHI2_650bit_e5e49650_100000.txt
+data/rhi_big_100k/RHI2_700bit_e60c8410_100000.txt
+data/rhi_big_100k/RHI2_750bit_a92b7bcb_100000.txt
+data/rhi_big_100k/RHI2_800bit_24cd222d_100000.txt
+data/rhi_big_100k/RHI2_850bit_d0cd2b62_100000.txt
+data/rhi_big_100k/RHI2_900bit_f28c4b41_100000.txt
+data/rhi_big_100k/RHI2_950bit_9ad22d63_100000.txt

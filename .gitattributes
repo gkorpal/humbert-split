@@ -2,3 +2,6 @@
 # Without this, a clone with core.autocrlf=true (the Windows default) would
 # rewrite LF to CRLF on checkout and the merged files would fail their checksums.
 data/polz_big_100k/*.part* -text
+
+# Same for the rhi_big_100k pieces.
+data/rhi_big_100k/*.part* -text
