@@ -2,6 +2,47 @@ using Oscar
 using Random
 
 # ============================================================
+# Provenance
+#
+#    This script's sampler is a port, not an independent construction.
+#    Three layers, oldest first:
+#
+#      Ibukiyama-Katsura-Oort, "Supersingular curves of genus two and
+#      class numbers", Compositio Math. 57(2):127-152, 1986 (Cor. 2.9)
+#        -> characterizes Mat(O), the set of unimodular Hermitian
+#           polarizations, which is what random_polarization samples from.
+#
+#      Kohel-Lauter-Petit-Tignol, "On the quaternion l-isogeny path
+#      problem", LMS J. Comput. Math. 17 (2014), Special Issue A
+#      (ANTS-XI), 418-432, eprint 2014/505; and De Feo-Kohel-Leroux-
+#      Petit-Wesolowski, "SQISign: Compact Post-Quantum Signatures from
+#      Quaternions and Isogenies", ASIACRYPT 2020, LNCS 12491, 64-93,
+#      eprint 2020/1240
+#        -> the RepresentInteger norm-equation solver that
+#           represent_integer_in_O below is built around.
+#
+#      Castryck-Decru-Kutas-Laval-Petit-Ti, "KLPT2: Algebraic
+#      Pathfinding in Dimension Two and Applications", CRYPTO 2025,
+#      eprint 2025/372 (https://github.com/KLPT2/KLPT2)
+#        -> random_polarization (section 5 below) is a direct port of
+#           this repo's G2KLPT.sage::RandomPolarisation, and
+#           represent_integer_in_O's outer shape (sample A2,A3; solve
+#           A0^2+A1^2=rhs) follows klpt_panny.py::RepresentInteger
+#           (itself vendored there from Panny's `deuring`, with
+#           attribution to KLPT 2014).
+#
+#    What is actually new here, relative to KLPT2's implementation: the
+#    mod-4 parity trichotomy and parity-restricted sampling (section 4),
+#    the factor_path_dead predicate that licenses it, the prime-only
+#    fast path (KLPT2 trial-divides to 2^20 then factors), randomized
+#    rather than deterministic (A2,A3) sampling, sbound/max_tries chosen
+#    heuristically from bits(p) rather than hardcoded, and s,t >= 1
+#    (KLPT2 samples from 0, admitting N=-1). See algos/algos.tex for the
+#    full write-up: prior work is presented there as cited black boxes,
+#    and only this new layer is given in detail.
+# ============================================================
+
+# ============================================================
 # Z conventions
 # ============================================================
 
@@ -189,6 +230,15 @@ det_unimodular_ok(H::Hermitian2x2ZZ, p::PInt) = (H.u*H.v - nrd_q(H.a, p) == 1)
 #    ππ̄, with π = x+iy found via Cornacchia from a square root of -1
 #    mod p).
 #
+#    This full factorization (sum_two_squares, gated on rhs's digit
+#    count by factor_digit_cutoff in represent_integer_in_O below) is
+#    what stands in place of KLPT2's per-sample `cornacchiaFriendly`
+#    test (trial division to 2^20, accepting rhs<2^160 or its largest
+#    factor <2^160 or a pseudoprime) feeding `QF.solve_integer`.
+#    Factoring rhs outright is hopeless at cryptographic size, which is
+#    exactly why represent_integer_in_O treats this as an opt-in
+#    fallback rather than the default path.
+#
 #    Nemo's factor(::ZZRingElem) is NOT safe to call concurrently: its
 #    ECM path indexes _flint_rand_states / _ecm_B1s / _ecm_nCs by
 #    Threads.threadid() (Nemo/src/flint/fmpz_factor.jl:77-91, the same
@@ -305,7 +355,17 @@ end
 # ============================================================
 # 4) RepresentInteger: probabilistic solver for r ∈ O with nrd(r) = N
 #
-#    Kohel–Lauter–Petit–Tignol / SQIsign-style RepresentInteger.
+#    This is the KLPT2 / panny variant of RepresentInteger: the outer
+#    shape (sample A2,A3; solve A0²+A1²=rhs by Cornacchia or, failing
+#    that, factor rhs) follows klpt_panny.py::RepresentInteger, which is
+#    itself the Kohel–Lauter–Petit–Tignol (2014) / SQIsign-style
+#    RepresentInteger vendored there. That vendored solver targets the
+#    suborder Z+Zi+Zj+Zij (norm form x²+y²+p(z²+t²)) via a deterministic
+#    nested loop over (z,t), with no parity restriction and no notion of
+#    the maximal order's membership condition. Below, by contrast, A2,A3
+#    are sampled randomly and r is assembled and checked against the
+#    membership parity for the maximal order O — see in_order/to_wxyz.
+#
 #    Writing r = (A0+A1 i+A2 j+A3 ij)/2, the norm equation
 #    nrd(r) = (A0²+A1²+p(A2²+A3²))/4 = N becomes, for random A2,A3,
 #        A0² + A1² = 4N - p(A2²+A3²) =: rhs.
@@ -317,8 +377,10 @@ end
 #    constant fraction of samples land on a prime rhs ≡ 1 (mod 4), so
 #    O(log p) retries succeed with overwhelming probability.
 #
-#    Parity: with p ≡ 3 (mod 4), A2²+A3² is 0, 1 or 2 mod 4 according as
-#    A2,A3 are both even, opposite parity, or both odd, so
+#    Parity (this implementation's addition — absent from KLPT2/panny,
+#    which applies no parity restriction at all): with p ≡ 3 (mod 4),
+#    A2²+A3² is 0, 1 or 2 mod 4 according as A2,A3 are both even,
+#    opposite parity, or both odd, so
 #        rhs = 4N - p(A2²+A3²) ≡ 0, 1, 2 (mod 4)
 #    respectively. The fast path's `rhs ≡ 1 (mod 4)` test therefore holds
 #    for exactly the opposite-parity samples — a fact known before rhs is
@@ -327,7 +389,8 @@ end
 #    Same-parity samples are still reachable through the factor fallback
 #    (both even needs A0,A1 both even, rhs ≡ 0; both odd needs A0,A1 both
 #    odd, rhs ≡ 2), so the restriction is applied only when that fallback
-#    is provably dead for this call.
+#    is provably dead for this call. See algos/algos.tex, Lemma 1 and
+#    Corollary 1, for the full statement and proof of this fact.
 # ============================================================
 
 """
@@ -377,6 +440,24 @@ Solve nrd(r) = N for r ∈ O by random sampling + Cornacchia (fast
 path), falling back to full factorization of `rhs` via
 `sum_two_squares` when `allow_factor` is set or `rhs` has at most
 `factor_digit_cutoff` decimal digits.
+
+This is a variant of the Kohel–Lauter–Petit–Tignol (2014) / SQIsign
+RepresentInteger, following the outer shape of KLPT2's vendored
+`klpt_panny.py::RepresentInteger` (github.com/KLPT2/KLPT2, eprint
+2025/372) but not a straight port of it. Four deviations from that
+reference implementation:
+
+  1. targets the maximal order O (half-coordinates + parity membership
+     test), not the suborder Z+Zi+Zj+Zij that klpt_panny.py solves for;
+  2. (A2,A3) are drawn uniformly at random over [-B,B]², not from
+     klpt_panny.py's deterministic nested loop over (z,t);
+  3. the fast path is gated on `is_probable_prime(rhs)` directly, not
+     klpt_panny.py's `cornacchiaFriendly` (trial division to 2^20,
+     accepting rhs<2^160 or its largest factor <2^160 or a pseudoprime);
+  4. when the factor fallback is dead (see `factor_path_dead` below),
+     (A2,A3) is drawn with the opposite parity forced — a restriction
+     absent from klpt_panny.py, justified by the mod-4 argument in the
+     section comment above (algos/algos.tex, Lemma 1 / Corollary 1).
 
 Throws [`RepresentIntegerFailure`](@ref) if no solution is found within
 `max_tries` samples.
@@ -472,14 +553,27 @@ end
 # ============================================================
 # 5) Random polarization sampling
 #
-#    Samples s ∈ [1, p^sbound] and t ∈ [1, p^(3·sbound)], sets
+#    This function is a direct port of KLPT2's
+#    G2KLPT.sage::RandomPolarisation (github.com/KLPT2/KLPT2, Castryck–
+#    Decru–Kutas–Laval–Petit–Ti, "KLPT2: Algebraic Pathfinding in
+#    Dimension Two and Applications", CRYPTO 2025, eprint 2025/372):
+#    samples s ∈ [1, p^sbound] and t ∈ [1, p^(3·sbound)], sets
 #    N = st - 1, and solves nrd(r) = N in O via represent_integer_in_O.
 #    Then [s r; r̄ t] is Hermitian with det = st - nrd(r) = 1, i.e. a
-#    unimodular (positive-definite) polarization. sbound controls the
-#    size of s,t and hence, via N ≈ st, the size of the norm equation
-#    represent_integer_in_O must solve; the t-bound is cubed in s so
-#    that N ranges widely relative to p, keeping the Cornacchia fast
-#    path's prime-density heuristic effective.
+#    unimodular (positive-definite) polarization; Mat(O), the set of
+#    such matrices, is characterized in KLPT2 Thm. 2.8 (itself due to
+#    Ibukiyama–Katsura–Oort, Compositio Math. 57(2):127–152, 1986,
+#    Cor. 2.9).
+#
+#    One deliberate correction relative to KLPT2's version: s,t are
+#    sampled from [1, ·], not KLPT2's `randint(0, ·)`, since Thm. 2.8
+#    requires s,t ∈ Z_{>0} and `randint(0,·)` can produce s=0 or t=0,
+#    hence N = st-1 = -1, outside the theorem's hypotheses.
+#
+#    sbound controls the size of s,t and hence, via N ≈ st, the size of
+#    the norm equation represent_integer_in_O must solve; the t-bound is
+#    cubed in s so that N ranges widely relative to p, keeping the
+#    Cornacchia fast path's prime-density heuristic effective.
 # ============================================================
 
 """
@@ -488,6 +582,10 @@ end
 
 Sample a random unimodular polarization [s r; r̄ t] over O with
 nrd(r) = st - 1, for `pZ` a validated prime ≡ 11 (mod 12).
+
+A direct port of KLPT2's `G2KLPT.sage::RandomPolarisation`
+(github.com/KLPT2/KLPT2, eprint 2025/372), with one deliberate change:
+s,t ≥ 1 here, vs. KLPT2's `randint(0,·)` which admits N = st-1 = -1.
 """
 function random_polarization(pZ::ZElem; sbound::Int=20,
                             rng::AbstractRNG=Random.default_rng(),
@@ -511,6 +609,15 @@ end
 
 # ============================================================
 # 6) Parameter heuristics
+#
+#    Neither function below has a KLPT2 analogue: KLPT2's
+#    RandomPolarisation hardcodes sbound=20 unconditionally, which is
+#    fine for the small test primes it was exercised on but gives
+#    N ≈ p^80 — about 80,000 bits for a 1000-bit p — far beyond what
+#    represent_integer_in_O can solve in practice. suggest_sbound and
+#    suggest_params below replace that constant with heuristics scaled
+#    to p's bit length, so the same code path stays usable from 8-bit
+#    test primes up to thousand-bit cryptographic primes.
 #
 #    sbound itself (see random_polarization) has no single correct
 #    value: it sets N ≈ p^(4·sbound) via s ∈ [1,p^sbound],
@@ -577,6 +684,12 @@ end
 
 # ============================================================
 # 7) Batch generation of N random polarizations — PARALLEL
+#
+#    No KLPT2 analogue: KLPT2's RandomPolarisation produces one sample
+#    at a time. Parallel, distinct-corpus generation (this section, plus
+#    the thread-safe RNG plumbing of section 1 and the FACTOR_LOCK of
+#    section 3) is entirely local to this project, needed to build the
+#    data/ corpora at useful scale and thread count.
 #
 #    Each random_polarization draw is statistically independent, so
 #    the N draws are embarrassingly parallel across threads, each
