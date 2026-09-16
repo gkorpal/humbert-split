@@ -1,0 +1,25 @@
+============================================================
+p = 11   ell = 3   log(p) = 2.3978952727983707   Kmax = 3   timeout = none
+forms = 2
+============================================================
+
+Phase 1 (local checks, parallel)  —  0h 0m 0.0s
+  All 6 (form, k) pairs passed.
+
+Phase 2 (global search, serial)  —  timeout=none
+
+  Form 1
+    k=1  PASS (witness found)  witness=[0, 1, 1, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 0, -3, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, -2, -1, -8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3]  count=3
+
+  Form 2
+    k=1  PASS (witness found)  witness=[0, 0, 1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, -1, 2, 3]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, -7, 6, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3]  count=3
+
+Phase 2 complete  —  0h 0m 0.0s
+
+Total wall time: 0h 0m 0.2s

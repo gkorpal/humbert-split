@@ -1,0 +1,2501 @@
+============================================================
+p = 107   ell = 3   log(p) = 4.672828834461906   Kmax = 5   timeout = none
+forms = 311
+============================================================
+
+Phase 1 (local checks, parallel)  —  0h 0m 0.0s
+  All 1555 (form, k) pairs passed.
+
+Phase 2 (global search, serial)  —  timeout=none
+
+  Form 1
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, -3, -5, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 3, -4, -11, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 5, -2, -15, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 2
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 1, 0, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 3, 0, 5, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -2, 1, -11, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -8, 1, -15, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 3
+    k=2  PASS (witness found)  witness=[2, 3, 3, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, 3, 5, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, 7, 10, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, -5, 2, 14, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 4
+    k=1  PASS (witness found)  witness=[1, -1, -1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, -6, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -1, -6, -2, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, 1, -16, 4, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 5
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 1, -2, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, 2, 3, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 1, 2, 6, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -7, 1, 2, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 6
+    k=1  PASS (witness found)  witness=[0, 1, -1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 3, -6, -5, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 7, -6, -5, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 17, -14, -17, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 7
+    k=2  PASS (witness found)  witness=[1, -1, 1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, 1, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -1, -1, -4, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 0, -1, -14, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 8
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 3, -1, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -3, 0, -5, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 7, 3, 10, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -7, -5, -14, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 9
+    k=1  PASS (witness found)  witness=[0, 0, 0, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -2, 3, 0]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, -2, 6, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -1, -3, 12, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 2, -14, 17, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 10
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, -3, -2, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -1, 7, -4, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -10, 18, -10, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 11
+    k=1  PASS (witness found)  witness=[1, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -2, -1, -5, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -8, -6, -11, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -14, -8, -22, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 12
+    k=2  PASS (witness found)  witness=[1, -1, 4, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, -9, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 2, -13, -5, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 4, -17, -7, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 13
+    k=2  PASS (witness found)  witness=[1, 0, 3, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 4, 5, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 1, 7, 11, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 8, -11, -15, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 14
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 3, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -3, -8, 5, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -17, -24, 20, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 15
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -1, 2, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -1, 6, 6, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, -5, 8, 16, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 16
+    k=1  PASS (witness found)  witness=[1, -1, -1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, -1, -2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, -1, -4, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 3, 1, -8, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 6, -9, -4, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 17
+    k=2  PASS (witness found)  witness=[1, 4, 1, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -5, -3, -2, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -7, -7, 1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -23, -15, 1, -39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 18
+    k=2  PASS (witness found)  witness=[0, 1, -1, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 5, 0, 3, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 4, 2, 6, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, -6, -4, 2, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 19
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, -1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -2, 0, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 4, -5, -1, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 15, -14, 2, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 20
+    k=2  PASS (witness found)  witness=[1, 1, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, -1, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 9, 2, 8, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 24, 1, 21, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 21
+    k=1  PASS (witness found)  witness=[1, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 2, -1, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, -3, -3, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 3, 1, -7, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, -3, -3, -9, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 22
+    k=2  PASS (witness found)  witness=[0, 3, 1, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, -1, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -7, 3, -8, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, -11, 9, -21, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 23
+    k=2  PASS (witness found)  witness=[4, 5, -1, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 2, 1, 3, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, 5, -1, 6, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -1, -3, 2, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 24
+    k=1  PASS (witness found)  witness=[1, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 3, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 3, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 2, 0, -4, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 10, -6, 2, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 25
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 0, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 0, 4, -4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, 8, 12, -17, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 26
+    k=1  PASS (witness found)  witness=[1, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, -1, 2, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[6, 4, 2, 3, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[12, 8, 5, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, 13, 8, 0, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 27
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -2, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -10, 5, 5, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -29, 8, 12, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 28
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, 4, 5, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -7, 3, 5, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -19, 5, 17, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 29
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 4, 1, -5, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -4, -6, 5, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -18, -21, 17, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 30
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 3, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 9, 7, 8, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, 24, 19, 21, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 31
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -1, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 5, 3, 1, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 17, 12, 8, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 32
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, 3, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 1, 8, 5, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 11, 18, 12, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 33
+    k=1  PASS (witness found)  witness=[1, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, 0, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 5, 0, 2, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 4, -1, -1, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -14, 3, 3, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 34
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -3, -2, -4, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -5, -4, -2, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, -20, -11, -7, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 35
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 1, 1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 4, 5, 3, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 4, 13, 4, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 36
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 2, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 6, -4, -7, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 10, -6, -8, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 34, -14, -26, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 37
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -2, 3, 3]  nodes=3  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 0, 0, -3, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 2, 4, -9, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 38
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 3, -2, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -7, 1, 5, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -27, 0, 12, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 39
+    k=1  PASS (witness found)  witness=[1, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 0, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -4, 2, 4, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, -15, 2, 14, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 40
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 0, 1, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 2, -5, -4, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -2, -13, -14, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 41
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -4, 3, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 6, -7, -4, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 14, -25, -6, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 42
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 3, 1, 5, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -1, 3, 5, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -3, -11, -16, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 43
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 5, -2, 6, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 15, -9, 19, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 44
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, 1, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -3, 3, 0, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[19, -9, 6, -7, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 45
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, -1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 4, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -3, 10, 0, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[24, -17, 27, 3, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 46
+    k=2  PASS (witness found)  witness=[1, 1, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 4, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 7, 5, 6, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -18, -13, -22, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 47
+    k=2  PASS (witness found)  witness=[1, 0, -1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -4, 4, -1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -9, 12, 1, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -23, 22, 14, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 48
+    k=1  PASS (witness found)  witness=[0, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 3, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 1, 5, 7, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 4, 11, 22, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 49
+    k=1  PASS (witness found)  witness=[0, 0, 0, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, 4, 6, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 5, 4, 6, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -20, -13, -18, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 50
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -5, 0, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -15, 6, 12, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[19, -39, 14, 26, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 51
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -3, 2, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, -5, 4, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -17, 11, 13, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[27, -55, 34, 40, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 52
+    k=2  PASS (witness found)  witness=[2, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 3, 1, 2, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 8, 3, 3, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 13, 21, 4, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 53
+    k=1  PASS (witness found)  witness=[0, 0, 0, 1, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 0, 7, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 1, -2, 8, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 11, -6, 26, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 54
+    k=2  PASS (witness found)  witness=[1, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -4, -1, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -8, -4, -10, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -25, -12, -25, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 55
+    k=2  PASS (witness found)  witness=[2, -3, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 1, -4, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -1, 5, -10, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 8, 16, -27, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 56
+    k=2  PASS (witness found)  witness=[2, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, 2, 5, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -2, 5, 9, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, -7, 16, 27, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 57
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -1, 3, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, -8, 6, 4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[29, -17, 19, 8, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 58
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 1, 1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -5, -3, -2, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 15, 8, 12, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 59
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 1, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 1, 1, -1, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, -1, 1, -10, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 60
+    k=2  PASS (witness found)  witness=[1, 2, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 7, 4, 2, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 11, 5, -1, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, 29, 10, -1, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 61
+    k=1  PASS (witness found)  witness=[1, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 6, 4, 3, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 4, 8, 4, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 18, 22, 12, 33]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 62
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 1, -3, -6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 5, 5, -4, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, 9, 9, 0, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 63
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -5, -2, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -8, -7, -6, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, -15, -14, -12, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 64
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 2, -4, -3, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[14, 5, -8, -5, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[38, 14, -19, -19, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 65
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, -1, 2, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -2, 2, 7, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -9, 4, 21, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 66
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 2, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 3, 0, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 9, 13, -5, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 23, 37, -13, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 67
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, -1, -4, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 0, 5, 0, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 0, -17, 0, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 68
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, -4, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -3, -9, -2, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, -5, -24, -2, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 69
+    k=2  PASS (witness found)  witness=[1, 2, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, -3, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, 16, -8, 13, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, 39, -23, 30, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 70
+    k=1  PASS (witness found)  witness=[1, 0, -1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 5, 3, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -4, 6, 2, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, -13, 19, 6, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 71
+    k=2  PASS (witness found)  witness=[0, 1, 1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 2, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -7, -4, 5, 15]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 26, 21, -14, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 72
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 2, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -8, 7, 2, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -24, 27, 12, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 73
+    k=2  PASS (witness found)  witness=[1, 0, -1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -5, -1, 0, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 7, 8, -5, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, -24, -21, 20, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 74
+    k=2  PASS (witness found)  witness=[0, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, 0, -6, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -3, -3, 10, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, -9, -12, 31, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 75
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -3, 0, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 3, -8, -5, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 9, -27, -13, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 76
+    k=2  PASS (witness found)  witness=[1, -1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[9, -4, 1, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[21, -10, 3, -12, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[51, -22, 7, -26, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 77
+    k=2  PASS (witness found)  witness=[1, 0, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 1, -2, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 6, 0, -1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, 27, 11, 2, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 78
+    k=2  PASS (witness found)  witness=[1, 0, -1, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, 0, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 4, -4, -1, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, 2, -8, -3, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 79
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, 4, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -1, 9, 2, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 1, 24, 2, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 80
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 0, -4, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 8, -2, -10, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 25, 2, -25, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 81
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 4, -1, -1, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 8, -6, -5, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 24, -22, -13, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 82
+    k=2  PASS (witness found)  witness=[1, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -3, 0, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 1, 9, -5, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, -2, -23, 13, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 83
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -5, 0, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, -13, -6, -12, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[28, -35, -14, -26, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 84
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, 1, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 4, 1, 0, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -3, -1, 1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, -5, 6, 6, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 85
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 6, -1, -10, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 9, -4, -25, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 86
+    k=2  PASS (witness found)  witness=[1, 2, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -5, 1, -5, -8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -14, 5, -17, -24]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -32, 23, -43, -74]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 87
+    k=2  PASS (witness found)  witness=[1, -1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, -3, 3, -8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 5, -9, 7, -24]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, 17, -21, 32, -74]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 88
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, -2, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 3, -7, -3, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, 3, -17, -4, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 89
+    k=1  PASS (witness found)  witness=[1, -1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, -2, -4, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -4, -6, -8, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, -5, -24, -18, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 90
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 2, 0, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 5, -7, 1, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[24, 13, -9, -2, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 91
+    k=2  PASS (witness found)  witness=[1, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 2, -3, -6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -2, -4, 5, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, -9, -20, 4, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 92
+    k=1  PASS (witness found)  witness=[1, -1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 1, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -7, 0, -8, -15]  nodes=4  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, -22, 9, -23, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 93
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, -1, -4, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -8, -1, -7, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, -21, 4, -14, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 94
+    k=2  PASS (witness found)  witness=[1, -1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, -5, -8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 5, 5, -17, -24]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 20, 23, -43, -74]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 95
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, 0, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -4, 2, -1, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -19, -4, -8, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 96
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -2, -1, -2, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -3, -5, -3, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 12, 11, 4, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 97
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 4, -5, 2, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 4, -4, 5, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -11, 13, -13, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 98
+    k=2  PASS (witness found)  witness=[1, -1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, -2, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 2, -4, -11, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 9, -6, -22, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 99
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 5, 1, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -5, 9, -2, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -20, 22, -12, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 100
+    k=2  PASS (witness found)  witness=[0, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 0, -6, -3]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 8, -1, 7, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 21, -6, 22, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 101
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[6, -7, 3, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, -14, 0, 12, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[35, -44, 10, 26, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 102
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -3, 5, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 0, 8, -12, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 3, 26, -31, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 103
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 3, 2, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -1, 5, 1, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -2, 9, -5, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 104
+    k=2  PASS (witness found)  witness=[0, 1, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, -4, -6, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 2, -1, -7, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 8, 0, -22, -39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 105
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, 2, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -2, 1, 0, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -15, -2, -6, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 106
+    k=2  PASS (witness found)  witness=[4, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[9, 3, -1, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[18, 9, -2, 13, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[55, 27, -8, 40, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 107
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, -1, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 7, -4, 7, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 13, -16, 18, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 108
+    k=2  PASS (witness found)  witness=[2, 2, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 3, 3, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 10, 8, 1, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, 35, 16, -13, 61]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 109
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 1, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 1, -3, -12, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 3, -4, -38, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 110
+    k=2  PASS (witness found)  witness=[1, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, 1, -4, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -16, 5, -11, -15]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -31, 7, -32, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 111
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 2, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 4, 2, 6, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 15, 0, 14, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 112
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -2, -2, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 3, 5, -4, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 19, 20, -8, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 113
+    k=2  PASS (witness found)  witness=[1, 0, 0, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 0, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 1, -3, -8, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 5, -12, -20, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 114
+    k=2  PASS (witness found)  witness=[1, 1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 2, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -4, 6, 11, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, -15, 23, 21, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 115
+    k=2  PASS (witness found)  witness=[0, 2, -1, 0, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 0, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 0, 2, -2, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 5, 8, -1, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 116
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -4, 0, -4, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -11, -3, -7, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[24, -25, -10, -18, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 117
+    k=2  PASS (witness found)  witness=[1, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, 2, 0, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, 4, 2, 8, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, 7, 7, 19, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 118
+    k=1  PASS (witness found)  witness=[0, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, -6, -3, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 3, -6, -2, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 4, -22, -6, -33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 119
+    k=2  PASS (witness found)  witness=[0, 2, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 1, -6, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 2, 3, -13, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 10, 12, -35, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 120
+    k=1  PASS (witness found)  witness=[1, 0, -1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, 0, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -11, -7, 12, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 26, 17, -32, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 121
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 0, 0, 6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -5, -4, -2, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, -11, -12, -6, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 122
+    k=2  PASS (witness found)  witness=[1, 2, -2, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 7, -3, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 11, -11, -13, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 38, -24, -31, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 123
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, -1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, -2, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 4, -6, 6, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 13, -28, 14, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 124
+    k=2  PASS (witness found)  witness=[4, 0, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 2, 2, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 0, 4, 7, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, -6, 7, 19, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 125
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, -1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -8, 1, 4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -23, 2, 5, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 126
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, 0, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, 4, -2, 6, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[30, 4, -13, 14, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 127
+    k=2  PASS (witness found)  witness=[1, -2, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 4, -5, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 3, -4, 2, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, 8, -15, 7, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 128
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 4, -6, -5, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 10, -10, -6, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, 25, -24, -20, -39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 129
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, -1, -3, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 7, 1, -5, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 22, 1, -15, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 130
+    k=2  PASS (witness found)  witness=[1, 0, -1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 1, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -2, 1, -10, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -7, 3, -25, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 131
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 3, 1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -4, 5, -1, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -22, 15, -8, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 132
+    k=2  PASS (witness found)  witness=[1, 0, 1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 3, 0, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -2, 2, -2, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -5, 4, -1, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 133
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, -2, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -7, -7, 12, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -22, -20, 36, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 134
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, 0, -4, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 0, 1, 7, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 3, 6, 8, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 135
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 3, 5, 4, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 13, 13, 9, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 38, 43, 28, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 136
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 0, 1, 4, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 2, -3, 2, 11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 9, -11, 7, 33]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 137
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, -1, 0, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, 0, 2, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 1, 2, 4, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 1, -2, -6, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 138
+    k=2  PASS (witness found)  witness=[0, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 3, -5, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 0, -3, 10, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 0, -15, 25, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 139
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -1, 1, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, -1, -1, 2, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -5, 0, 0, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 140
+    k=2  PASS (witness found)  witness=[1, 0, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, -2, 1, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -1, -1, 8, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, 4, -11, 19, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 141
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, -1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 3, 5, 4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 21, 16, 7, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 142
+    k=2  PASS (witness found)  witness=[1, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 3, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -8, -11, 0, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -30, -29, -2, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 143
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, 2, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, 3, 1, 9, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, 0, -6, 23, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 144
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, 2, 2, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[13, 5, 11, 8, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[32, 13, 36, 22, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 145
+    k=1  PASS (witness found)  witness=[1, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -1, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -7, 4, 6, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 13, -1, -15, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 146
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, -3, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -9, 12, 8, 15]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -23, 32, 22, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 147
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, -1, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 3, -1, -12, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 7, -1, -31, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 148
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 0, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, -2, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 1, -4, 0, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[30, -1, -12, 7, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 149
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, 1, 2, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 0, 5, 3, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 1, 16, 9, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 150
+    k=2  PASS (witness found)  witness=[1, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -3, 0, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -4, 0, 10, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, -19, -7, 28, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 151
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 5, 0, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, 9, 0, 1, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[31, 20, -1, -2, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 152
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, 1, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -1, 2, 7, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, -5, 6, 23, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 153
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 2, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 3, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -4, 13, 6, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -7, 33, 14, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 154
+    k=2  PASS (witness found)  witness=[2, -1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -3, 3, 6, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -12, 5, 13, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -28, 13, 35, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 155
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 2, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -3, -6, -5, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -13, -16, -17, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 156
+    k=2  PASS (witness found)  witness=[1, 2, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 5, -2, 8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 7, 11, -6, 25]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, 28, 28, -24, 77]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 157
+    k=2  PASS (witness found)  witness=[1, 1, -1, 1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, -2, 1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 12, -6, 8, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 32, -13, 21, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 158
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 2, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, -3, -3, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 5, -8, -6, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 16, -23, -19, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 159
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, 2, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 1, 6, 9, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, 6, 9, 23, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 160
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 3, -5, -4, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 5, -11, -10, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 17, -33, -31, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 161
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 5, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 5, 11, 5, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 1, 28, 12, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 162
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 0, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 2, 1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, -6, 3, 4, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, -8, 8, 9, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 163
+    k=2  PASS (witness found)  witness=[1, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 2, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -2, -4, -11, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -4, -8, -21, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 164
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -3, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 1, -10, 10, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -9, 29, -31, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 165
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -3, -3, 1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, -11, -9, 7, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[29, -33, -27, 21, -57]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 166
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, -3, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -5, -5, -3, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, -6, -21, -22, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 167
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, -1, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 8, -6, 10, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 18, -15, 31, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 168
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, -1, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, -4, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, -7, -13, 12, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[30, -19, -38, 36, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 169
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 0, -4, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 2, 2, -7, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 10, 8, -23, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 170
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, -1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 4, 1, -5]  nodes=69  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -1, 2, 4, -16]  nodes=222  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 28, 0, 0, -49]  nodes=3317  elapsed=0.1s (spawn=0.0s, search=0.1s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 171
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, -2, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, -3, -5, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 5, -3, -12, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 11, -12, -37, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 172
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 1, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, -4, 4, 12, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, -16, 10, 26, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 173
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, 0, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -4, -4, 13, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, -7, -12, 30, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 174
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, -1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, -2, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 9, -4, 1, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, 21, -13, -1, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 175
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, -3, -2, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -3, -3, -3, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, -17, -14, -11, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 176
+    k=2  PASS (witness found)  witness=[0, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, 0, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 2, 5, -7, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 6, 15, -13, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 177
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 3, 1, -2, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 6, -3, -1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, 15, -6, 2, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 178
+    k=2  PASS (witness found)  witness=[1, -1, 1, 1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 1, 1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[12, -1, 7, 6, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[30, -9, 21, 17, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 179
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 2, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -4, -4, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, -10, -14, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, 5, -25, -38, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 180
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, 3, -3, -6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 6, -2, 4, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -26, 12, 0, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 181
+    k=2  PASS (witness found)  witness=[2, -2, -1, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[7, -1, -1, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[13, -6, -8, -5, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[44, -25, -37, -23, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 182
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, 1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, 0, 0, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -8, 2, -5, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -28, 2, -15, 57]  nodes=4  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 183
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 0, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 0, 0, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, 2, 0, -7, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[30, 8, 0, -21, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 184
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 0, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 0, -2, -5, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, 9, -4, -4, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 185
+    k=1  PASS (witness found)  witness=[0, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 2, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 4, 4, 3, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 9, 4, 9, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 26, 13, 22, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 186
+    k=2  PASS (witness found)  witness=[0, 2, 1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -4, -5, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, -9, -8, 13, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -20, -23, 30, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 187
+    k=2  PASS (witness found)  witness=[2, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 1, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -8, 3, -2, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 22, -11, 18, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 188
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 0, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 0, -2, 8, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -11, -2, 13, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 189
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 1, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 2, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -5, -8, 6, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -12, -23, 17, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 190
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, -3, -5, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -6, -5, -12, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -19, -13, -37, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 191
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, 1, -3, -6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -8, 3, -5, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -22, 12, -4, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 192
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 1, 0, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 9, 4, 0, -15]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, -18, -18, -5, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 193
+    k=2  PASS (witness found)  witness=[0, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, -1, 5, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 4, -2, 12, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 11, -1, 30, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 194
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, -1, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 2, -5, 5, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 1, -16, 17, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 195
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 0, -1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 2, 4, 1, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, 13, 9, 2, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 196
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, 2, -1, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -3, 3, 3, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, -7, 16, 5, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 197
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, -2, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 6, -4, -5, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 23, -15, -8, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 198
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -4, -4, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 11, 13, -12, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, 31, 33, -25, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 199
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -4, -1, -5, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 8, 8, 10, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 25, 21, 27, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 200
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, -4, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 2, -8, -4, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 13, -20, -8, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 201
+    k=2  PASS (witness found)  witness=[2, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[6, 2, 0, 3, 6]  nodes=3  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[13, 9, -1, 4, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[36, 25, -4, 16, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 202
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -3, 0, -4, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -6, -1, -7, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -21, 4, -14, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 203
+    k=2  PASS (witness found)  witness=[2, 2, 1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, 1, -4, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 8, 7, -14, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 31, 17, -37, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 204
+    k=2  PASS (witness found)  witness=[1, -1, -1, 1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -2, -3, 1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 3, 3, -7, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 8, 3, -27, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 205
+    k=2  PASS (witness found)  witness=[1, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 2, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -2, 5, 5, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -4, 13, 17, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 206
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 4, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 9, 9, 1, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, -23, -21, 2, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 207
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 2, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, -2, -1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -2, 8, 1, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -3, 18, 9, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 208
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 0, -3, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 7, 2, -4, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, 21, 8, -16, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 209
+    k=2  PASS (witness found)  witness=[1, -3, -1, 0, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -2, -6, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -5, -11, -4, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -11, -29, -7, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 210
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, 3, 4, 8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, 7, 5, 14, 24]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[22, 14, 19, 32, 74]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 211
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, -3, 1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 5, 3, -7, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 14, 3, -27, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 212
+    k=2  PASS (witness found)  witness=[1, 0, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 4, 1, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 5, 3, -11, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, -12, -13, 37, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 213
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, 1, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, -1, 4, -7, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[25, -1, 9, -15, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 214
+    k=2  PASS (witness found)  witness=[1, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 3, 3, 2, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 7, 9, 2, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 20, 23, 8, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 215
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 2, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -11, -5, -2, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, -33, -8, -2, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 216
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 1, -5, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -4, 2, -10, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -12, 9, -24, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 217
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 2, 0, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 2, 9, 2, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 4, 20, 6, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 218
+    k=2  PASS (witness found)  witness=[0, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 0, 1, 1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 6, 1, 1, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -15, -10, -8, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 219
+    k=2  PASS (witness found)  witness=[0, 1, 0, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 0, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, 10, -4, -7, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[27, 24, -14, -19, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 220
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, 3, 0, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 5, 6, -4, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, 20, 12, -23, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 221
+    k=2  PASS (witness found)  witness=[1, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, -3, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -1, -2, 9, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, 7, 4, -17, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 222
+    k=2  PASS (witness found)  witness=[1, 2, 0, -1, 0]  nodes=22  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, 4, 2, 3, 4]  nodes=266  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -12, -14, 3, -16]  nodes=2271  elapsed=0.1s (spawn=0.0s, search=0.1s)
+    k=5  PASS (witness found)  witness=[16, 8, -1, -15, -61]  nodes=5374  elapsed=0.5s (spawn=0.0s, search=0.5s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 223
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 2, 4, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, 4, 1, 12, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, 9, -2, 31, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 224
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, -1, 0, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, -2, 5, 9]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[15, -4, -6, 14, 27]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[42, -18, -14, 47, 81]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 225
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, -3, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -1, 3, 8, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 0, 3, 19, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 226
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 1, -1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 2, 1, 1, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 4, 0, -1, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 227
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 2, -2, 0]  nodes=29  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 3, 6, -4, 2]  nodes=325  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -11, -2, 0, -14]  nodes=225  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[9, 6, -3, -1, -46]  nodes=85  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 228
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 4, -3, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 7, -5, 4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 26, -23, 8, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 229
+    k=2  PASS (witness found)  witness=[2, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 4, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[10, 6, 7, 13, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[31, 9, 16, 29, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 230
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, -1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -1, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -8, -4, 6, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, -23, -9, 12, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 231
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, 4, 1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -3, 11, 8, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -4, 36, 22, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 232
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, -2, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 1, 4, -2, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, 7, 18, 0, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 233
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, -3, 0, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -13, 12, -4, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -34, 39, -23, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 234
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 2, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, -5, -6, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -12, 11, 16, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -38, 27, 43, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 235
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 1, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 2, -1, 8, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[10, 3, -10, 20, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 236
+    k=2  PASS (witness found)  witness=[1, 1, -2, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, -4, 6, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -2, 14, -15, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -3, 40, -39, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 237
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, -2, -1, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 4, -6, 1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 14, -16, 9, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 238
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -2, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, -2, 4, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -10, -6, 12, 15]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -25, -19, 31, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 239
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 2, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[11, 10, 2, 10, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[24, 28, 11, 30, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 240
+    k=2  PASS (witness found)  witness=[0, 0, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 0, -2, 3, 6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -5, -2, 7, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, -12, -12, 22, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 241
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 2, 0, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -5, -1, -6, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -12, 1, -16, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[7, -37, 3, -43, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 242
+    k=2  PASS (witness found)  witness=[0, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 0, 5, 3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[9, -2, -4, 9, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, -6, -11, 27, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 243
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 0, 0, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 7, -4, -2, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 21, -12, -6, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 244
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, -2, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 1, -6, -6]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, 0, -14, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 3, -9, -31, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 245
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 2, -1, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 0, 9, -5, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 2, 24, -13, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 246
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 5, 2, 1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -12, -6, -7, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -35, -18, -21, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 247
+    k=2  PASS (witness found)  witness=[4, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 4, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 14, 2, 10, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, 32, 3, 28, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 248
+    k=2  PASS (witness found)  witness=[1, 0, -1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, 3, 0, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 6, 5, 6, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 28, 21, 20, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 249
+    k=2  PASS (witness found)  witness=[1, -1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 0, -1, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -1, -6, -9, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 8, -9, -18, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 250
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, -1, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -6, 8, -1, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, -16, 24, -3, -57]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 251
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -1, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 3, 5, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 3, 9, 11, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, 5, 25, 26, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 252
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, -3, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 6, 8, 12, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 22, 23, 38, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 253
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, 0, 3, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 2, 6, 9, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, 2, 8, 17, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 254
+    k=2  PASS (witness found)  witness=[0, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -1, -2, -3, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 0, -3, -3, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, 8, -4, -11, -39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 255
+    k=2  PASS (witness found)  witness=[0, 0, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, 0, -3, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 2, -2, 3, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -2, 13, -11, -39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 256
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 0, -5, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 4, -2, -9, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, 13, -8, -20, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 257
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -2, 2, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, -3, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 1, 10, -13, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -8, -30, 34, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 258
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 0, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 2, -2, -1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 10, -4, 2, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[17, 28, -16, 12, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 259
+    k=2  PASS (witness found)  witness=[2, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -5, -2, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 2, 11, 2, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, 9, 25, -5, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 260
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, 2, -1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -3, 4, -1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -2, 14, -7, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, -10, 34, -16, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 261
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 2, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -1, 2, 0, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[16, -6, 1, -7, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 262
+    k=1  PASS (witness found)  witness=[0, 1, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 2, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -1, -7, 1, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, -1, -14, 9, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 263
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, 1, 1, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -3, -4, -8, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, -5, -15, -22, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 264
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, 1, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, -3, 7, 7, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, -13, 20, 15, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 265
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, -2, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 6, 5, -4, -19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, 16, 17, -12, -57]  nodes=3  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 266
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -3, 0, -1, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -4, -6, 0, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[15, -13, -18, 7, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 267
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 3, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 11, 8, 11, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 32, 24, 34, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 268
+    k=2  PASS (witness found)  witness=[1, 1, -1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, -3, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, -4, -6, 10, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -2, -25, 36, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 269
+    k=2  PASS (witness found)  witness=[0, 3, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 0, -3, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 8, 0, -4, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, 31, -9, -8, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 270
+    k=2  PASS (witness found)  witness=[3, 0, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, 0, 4, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[13, -6, 6, 4, 17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[34, -24, 17, 7, 52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 271
+    k=2  PASS (witness found)  witness=[0, 1, 2, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -5, -4, -2, -3]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, -5, -2, -11]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 6, -14, -6, -33]  nodes=3  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 272
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 0, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 4, 0, 1, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 8, 2, -1, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, -26, -3, 1, -57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 273
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, -2, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, -1, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 2, -4, 2, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 7, -12, 12, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 274
+    k=2  PASS (witness found)  witness=[0, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, 2, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 0, -1, -2, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 9, -6, 5, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 275
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, -1, -2, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 1, 0, 4, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 7, -3, 8, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 276
+    k=2  PASS (witness found)  witness=[3, 1, 1, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[7, 1, 2, 6, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[19, 3, -1, 16, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[52, -2, -4, 37, 61]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 277
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, -1, -1, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 6, -2, -4, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, 12, -6, -8, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, 40, -17, -19, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 278
+    k=2  PASS (witness found)  witness=[0, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 1, -1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 6, 10, -7, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[21, 13, 25, -15, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 279
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 1, 0, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 0, 0, 4, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -6, -3, 8, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -17, -12, 19, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 280
+    k=2  PASS (witness found)  witness=[1, 0, -1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[5, -2, -1, 2, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -8, -1, 2, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 20, 3, 5, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 281
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -1, 1, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 3, -7, -10, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[4, 15, -21, -27, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 282
+    k=2  PASS (witness found)  witness=[2, 1, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[7, 3, 2, 0, 6]  nodes=3  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[13, 3, 3, -3, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[40, 19, 14, -7, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 283
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -4, 0, -5, -6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[15, -8, -5, -12, -20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[31, -20, -13, -26, -62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 284
+    k=2  PASS (witness found)  witness=[1, -1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, 0, -2, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[12, -3, 4, 0, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[26, -6, 9, 7, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 285
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 0, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, -4, 1, -1, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -9, 1, -8, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[19, -26, -4, -28, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 286
+    k=2  PASS (witness found)  witness=[2, -1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, 1, 0, 1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[12, -1, -2, 5, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[29, -3, 2, 9, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 287
+    k=2  PASS (witness found)  witness=[0, 1, 2, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[6, 5, 2, 3, 3]  nodes=6  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 6, 8, 4, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 12, 21, 13, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 288
+    k=1  PASS (witness found)  witness=[1, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, 0, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[0, 3, 4, -8, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[8, 5, 16, -20, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 289
+    k=2  PASS (witness found)  witness=[1, 2, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 5, 4, 3, 8]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 14, 10, 7, 25]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 45, 29, 11, 77]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 290
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 0, 0, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, -1, -1, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, 7, -5, -1, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 20, -20, -8, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 291
+    k=2  PASS (witness found)  witness=[0, 2, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 1, 2, 0, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 5, 6, 0, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[2, 7, 14, -3, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 292
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, -2, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 2, 3, 6, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 1, 9, 14, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, 5, 19, 35, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 293
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 3, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 11, 10, 6, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[19, 18, 27, 9, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 294
+    k=2  PASS (witness found)  witness=[0, 1, 1, 0, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 0, 1, 1, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, 3, -4, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[12, 12, 11, -7, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 295
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 0, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 6, 0, 4, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 14, -2, 8, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, 26, -1, 13, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 296
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 1, 2, 2, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[1, 2, 1, 4, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[0, 1, 5, 5, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 297
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, -2, 0, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 9, -13, 6, -23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[29, 32, -38, 23, -70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 298
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 0, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, -1, 1, -5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[7, -2, -1, 1, -15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -15, 2, 8, -46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 299
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, -2, -1, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -1, -3, -3, -4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, 5, -4, -8, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[27, 15, -18, -17, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 300
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 2, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, 1, 2, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[8, -6, 2, 7, 15]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[23, -8, 11, 15, 46]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 301
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[0, 1, 0, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -2, 3, 3, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[6, -11, 9, 4, 19]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[20, -27, 25, 14, 57]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 302
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[4, -2, -1, 5, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, -5, -3, 12, 22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[19, -16, -10, 37, 66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 303
+    k=2  PASS (witness found)  witness=[1, 1, 2, 0, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 2, 2, 3, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -8, -9, -6, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[13, -23, -25, -19, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 304
+    k=2  PASS (witness found)  witness=[1, 1, 1, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 0, 1, 3, 5]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, -8, 1, -3, -17]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, -22, 9, -7, -52]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 305
+    k=2  PASS (witness found)  witness=[2, 1, 2, 1, 2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 1, 6, 6, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[2, 0, 14, 16, 23]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[5, -3, 38, 43, 70]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 306
+    k=2  PASS (witness found)  witness=[1, -2, -2, -2, -1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, -4, 0, -5, -7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -10, 4, -7, -25]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[6, -28, 13, -11, -77]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 307
+    k=1  PASS (witness found)  witness=[1, 0, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[1, -1, -1, 0, -2]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[0, 0, 3, -2, 7]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 2, -3, 8, -22]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[3, 11, -5, 22, -66]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 308
+    k=1  PASS (witness found)  witness=[0, 1, 0, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[3, 1, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[3, 2, -5, 5, 6]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[5, 2, -10, 11, 20]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[18, 5, -36, 26, 62]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 309
+    k=2  PASS (witness found)  witness=[1, 0, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, 1, 1, 4, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, -2, -3, -8, -13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[1, 2, -3, -19, -40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+  Form 310
+    k=1  PASS (witness found)  witness=[0, 0, 1, 0, 0]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=2  PASS (witness found)  witness=[2, 2, 0, 1, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[2, 3, 3, 3, 4]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[4, 8, 4, 9, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[14, 18, 3, 26, 40]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  Summary: min_k=1  represented_ks=[1, 2, 3, 4, 5]  count=5
+
+  Form 311
+    k=2  PASS (witness found)  witness=[0, 1, 0, 2, 1]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=3  PASS (witness found)  witness=[1, -2, 0, -6, -3]  nodes=2  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=4  PASS (witness found)  witness=[3, 5, -1, 7, 13]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+    k=5  PASS (witness found)  witness=[11, 17, -3, 21, 39]  nodes=1  elapsed=0.0s (spawn=0.0s, search=0.0s)
+  (1 k-value(s): FAIL (no witness) — not shown individually)
+  Summary: min_k=2  represented_ks=[2, 3, 4, 5]  count=4
+
+Phase 2 complete  —  0h 0m 1.0s
+
+Total wall time: 0h 0m 36.4s

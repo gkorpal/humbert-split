@@ -1,0 +1,66 @@
+0. Data and integrity checks
+   p   = 578415690713087  (50 bits)
+   ell = 2,  det = 16p^2,  targets are ell^{2k}
+   10000 data row(s) in 50 file(s); sections 1-3 use the 10000 scanned
+   rows by status:
+     OK                  10000
+   coverage: 10000 / 10000 forms  — complete
+   k0 >= kmin on every scanned row: consistent
+
+1. k0 distribution  (least k primitively representing ell^{2k})
+   10000 classes:  min 11   median 16   mean 15.86   max 17
+   predicted median (HEURISTIC, Siegel + Poisson): 15.93
+
+   Empirical CDF against  P(k0 <= k) = 1 - exp(-(pi^2/6)·ell^{3k}/p):
+        k   count      cum    empirical   predicted      diff
+       11        1        1       0.0001      0.0000   +0.0001
+       12        1        2       0.0002      0.0002   +0.0000
+       13       36       38       0.0038      0.0016   +0.0022
+       14      294      332       0.0332      0.0124   +0.0208
+       15     1926     2258       0.2258      0.0952   +0.1306
+       16     6539     8797       0.8797      0.5509   +0.3288
+       17     1203    10000       1.0000      0.9983   +0.0017
+
+   max |empirical - predicted| = 0.3288   (1.36/sqrt(n) = 0.0136)
+   fitted coefficient = 4.350 from 6 level(s)   (predicted pi^2/6 = 1.645, ratio 2.64)
+   A ratio near 1 means the Siegel average is the right scale AND the
+   Poisson independence across k is not badly wrong. This fit cannot
+   separate the two.
+
+   Bound: least k capturing a given fraction of classes
+        fraction   empirical k   predicted k
+         50.0%            16         15.93
+         90.0%            17         16.51
+         99.0%            17         16.84
+         99.9%            17         17.04
+        99.99%            17         17.17
+   observed max k0 = 17 over 10000 class(es)
+   --kmax-cap 18 would have held every class in this data
+   That is a measurement, not a guarantee: a sample of 10000 cannot
+   see a class rarer than 1 in 10000. The predicted column is what
+   extrapolates past the sample, at the cost of assuming the law.
+
+2. k0 against covariates
+   det^(1/5) = 1.399e+06  (the Minkowski scale for lambda1)
+       k0   classes    mean lambda1/det^(1/5)        sd
+       11         1                   0.2240    0.0000
+       12         1                   0.4837    0.0000
+       13        36                   0.5373    0.2130
+       14       294                   0.5713    0.2228
+       15      1926                   0.5787    0.2216
+       16      6539                   0.5739    0.2197
+       17      1203                   0.5691    0.2207
+   A trend here would say short lattices represent sooner, which is the
+   λ₁ barrier showing up statistically. Compare the spread between rows
+   against the sd within them before believing it.
+
+    |Aut|   classes    mean k0        sd
+          2     10000     15.857    0.6683
+   |Aut| > 2 classes are rare and carry more mass each, so they are
+   where a mass-formula discrepancy would concentrate.
+
+3. Cost
+   10000 forms, 356.56 core-hours total, 128.4 s/form mean, 50.1 s median
+   quartiles 11.4 / 50.1 / 157.6 s,  max 3197.2 s (64x the median)
+   slowest forms: 1585 (3197.2s, k0=17), 25 (3077.9s, k0=17), 6443 (2898.6s, k0=17), 2468 (2749.4s, k0=17), 3977 (2676.7s, k0=17)
+
