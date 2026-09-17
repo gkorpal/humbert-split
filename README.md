@@ -10,7 +10,11 @@ This repository contains the code and data accompanying the paper.
 
 All scripts are in [`/scripts/`](/scripts/) and are implemented in Julia using the [Oscar](https://www.oscar-system.org/) package and its dependency [Nemo/Hecke](https://thofma.github.io/Hecke.jl/stable/). Each script is self-documented: its header comments explain the mathematics, the implementation and the usage.
 
-Throughout, $p \equiv 11 \pmod{12}$, $B_p = (-1,-p \mid \mathbb{Q})$, and $\mathcal{O} = \mathbb{Z}\langle 1, \beta_1, \beta_2, \beta_3\rangle$ with $\beta_1 = i$, $\beta_2 = \tfrac{i+j}{2}$, $\beta_3 = \tfrac{1+ij}{2}$. A principal polarization on $E \times E$ is $\theta = \begin{bmatrix} u & \alpha \\ \bar\alpha & v \end{bmatrix}$ with $u, v \in \mathbb{Z}_{>0}$, $\alpha \in \mathcal{O}$ and $uv - \mathrm{nrd}(\alpha) = 1$; every principally polarized superspecial abelian surface arises this way. Its refined Humbert invariant $q_{(E \times E,\theta)}$ is a positive definite quinary form of determinant $16p^2$. It represents $1$ exactly when $\theta$ is reducible, and it primitively represents $N^2$ exactly when $(E \times E, \theta)$ admits an $(N,N)$-splitting.
+Throughout, $p \equiv 11 \pmod{12}$, $B_p = (-1,-p \mid \mathbb{Q})$, and $\mathcal{O} = \mathbb{Z}\langle 1, \beta_1, \beta_2, \beta_3\rangle$ with $\beta_1 = i$, $\beta_2 = \tfrac{i+j}{2}$, $\beta_3 = \tfrac{1+ij}{2}$. A principal polarization on $E \times E$ is
+
+$$\theta = \begin{bmatrix} u & \alpha \\ \bar\alpha & v \end{bmatrix}, \qquad u, v \in \mathbb{Z}_{>0}, \quad \alpha \in \mathcal{O}, \quad uv - \mathrm{nrd}(\alpha) = 1,$$
+
+and every principally polarized superspecial abelian surface arises this way. Its refined Humbert invariant $q_{(E \times E,\theta)}$ is a positive definite quinary form of determinant $16p^2$. It represents $1$ exactly when $\theta$ is reducible, and it primitively represents $N^2$ exactly when $(E \times E, \theta)$ admits an $(N,N)$-splitting.
 
 **Pipeline 1: Principal polarizations**
 
