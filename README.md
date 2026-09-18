@@ -1,4 +1,4 @@
-# Testing the folklore, detecting split surfaces, and minimum walks on isogeny graphs of abelian surfaces
+# Detecting split surfaces, RM surfaces, and minimum walks on isogeny graphs
 
 This repository contains the code and data accompanying the paper.
 
